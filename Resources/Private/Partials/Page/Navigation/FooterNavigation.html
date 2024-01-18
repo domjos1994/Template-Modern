@@ -1,0 +1,86 @@
+<f:comment>
+<!--
+~ Copyright (c) Domjos 2023
+~
+~ This file is part of Domjos-Modern.
+~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+~
+~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+-->
+</f:comment>
+
+<f:variable name="isEnabled" value="1"/>
+<f:if condition="{0:footernavigation}=={0:NULL} && {contact_maps_embed_link}==''">
+    <f:if condition="{contact_email}=='' && {contact_phone}=='' && {contact_donate}=='' && {footer_instagram}=='' && {footer_youtube}=='' && {footer_facebook}==''">
+        <f:variable name="isEnabled" value="0"/>
+    </f:if>
+</f:if>
+
+<f:if condition="{isEnabled}==1">
+    <nav class="navbar navbar-expand-md navbar-light bg-light footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="nav flex-column">
+                        <f:for each="{footernavigation}" as="item">
+                            <li class="nav-item">
+                                <a class="nav-link {f:if(condition: item.active, then: 'active')}"
+                                   href="{item.link}"
+                                   target="{item.target}"
+                                   title="{item.title}">
+                                    {item.title}
+                                </a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav contact-and-social flex-column">
+                        <f:if condition="{contact_email}">
+                            <li class="nav-item">
+                                <a class="nav-link" href="mailto: {contact_email}" title="Contact"><i class="fa fa-at"></i> {contact_email}</a>
+                            </li>
+                        </f:if>
+                        <f:if condition="{contact_phone}">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tel:{contact_phone}" title="Contact"><i class="fa fa-phone"></i> {contact_phone}</a>
+                            </li>
+                        </f:if>
+                        <f:if condition="{contact_donate}">
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" title="Donate"><i class="fas fa-donate"></i> {contact_donate}</a>
+                            </li>
+                        </f:if>
+                        <f:if condition="{footer_instagram} || {footer_youtube} || {footer_facebook}">
+                            <li class="nav-item active">
+                                <a class="nav-link disabled" href="#"></a>
+                            </li>
+                            <f:if condition="{footer_facebook}">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{footer_facebook}" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                                </li>
+                            </f:if>
+                            <f:if condition="{footer_instagram}">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{footer_instagram}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                                </li>
+                            </f:if>
+                            <f:if condition="{footer_youtube}">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{footer_youtube}" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> Youtube</a>
+                                </li>
+                            </f:if>
+                        </f:if>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <f:if condition="{contact_maps_embed_link}">
+                        <iframe title="OSM-Maps" class="maps" width="425" height="350" src="{contact_maps_embed_link}" style="border: 1px solid black"></iframe><br/><small><a href="{contact_maps_big_link}">Größere Karte anzeigen</a></small>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </nav>
+</f:if>

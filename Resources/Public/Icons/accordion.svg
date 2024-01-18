@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  - Copyright (c) Domjos 2023
+  -
+  - This file is part of Domjos-Modern.
+  - Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  -
+  - Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<svg
+   x="0px"
+   y="0px"
+   viewBox="1558.3 -1158.3 283.5 283.5"
+   version="1.1"
+   id="svg35"
+   sodipodi:docname="accordion.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs39" />
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="3.1287478"
+     inkscape:cx="130.72322"
+     inkscape:cy="141.75"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg35" />
+  <rect
+     x="1576"
+     y="-1140"
+     fill="#FFFFFF"
+     width="247"
+     height="247"
+     id="rect25" />
+  <path
+     fill="#777"
+     d="M1576-1140.5v248h248v-248H1576L1576-1140.5z M1806.3-910.3h-212.6v-212.6h212.6V-910.3z"
+     id="path27" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.205199"
+     id="rect1460"
+     width="191.52263"
+     height="4.8771687"
+     x="1604.866"
+     y="-1113.2653" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.199676"
+     id="rect1460-8"
+     width="181.35175"
+     height="4.8771687"
+     x="1610.1448"
+     y="-1080.8345" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.199676"
+     id="rect1460-8-7"
+     width="181.35175"
+     height="4.8771687"
+     x="1610.1448"
+     y="-1048.7069" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.199676"
+     id="rect1460-8-6"
+     width="181.35175"
+     height="4.8771687"
+     x="1610.1448"
+     y="-1016.5793" />
+  <rect
+     style="fill:#999999;fill-opacity:1;stroke-width:0.471986"
+     id="rect1460-8-2"
+     width="181.35175"
+     height="27.250338"
+     x="1610.0521"
+     y="-1108.3881" />
+  <rect
+     style="fill:#999999;fill-opacity:1;stroke-width:0.471986"
+     id="rect1460-8-2-7"
+     width="181.35175"
+     height="27.250338"
+     x="1610.1448"
+     y="-1075.9573" />
+  <rect
+     style="fill:#999999;fill-opacity:1;stroke-width:0.471986"
+     id="rect1460-8-2-7-9"
+     width="181.35175"
+     height="27.250338"
+     x="1610.1448"
+     y="-1043.8297" />
+  <rect
+     style="fill:#999999;fill-opacity:1;stroke-width:0.846523"
+     id="rect1460-8-2-7-9-8"
+     width="181.35175"
+     height="87.65789"
+     x="1610.1448"
+     y="-1011.7021" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.205407"
+     id="rect1460-2"
+     width="191.90971"
+     height="4.8771687"
+     x="1604.4789"
+     y="-923.71863"
+     inkscape:transform-center-x="62.771493"
+     inkscape:transform-center-y="-30.683202" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.207778"
+     id="rect1460-3"
+     width="5.1861014"
+     height="184.6694"
+     x="1604.866"
+     y="-1108.3881" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.207778"
+     id="rect1460-3-2"
+     width="5.1861014"
+     height="184.6694"
+     x="1791.2024"
+     y="-1108.3881" />
+</svg>

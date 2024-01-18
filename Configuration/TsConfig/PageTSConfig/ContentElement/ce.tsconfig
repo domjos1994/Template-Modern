@@ -1,0 +1,16 @@
+mod.wizards.newContentElement.wizardItems {
+    // add the content element to the tab "common"
+    dm_content {
+        elements {
+            domjos_modern_banner {
+                iconIdentifier = banner_icon
+                title = LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.title
+                description = LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.description
+                tt_content_defValues {
+                    CType = domjos_modern_banner
+                }
+            }
+        }
+        show := addToList(domjos_modern_banner)
+    }
+}

@@ -1,0 +1,140 @@
+# todo look at localization
+base: /
+languages:
+  -
+    title: German
+    enabled: true
+    base: /
+    typo3Language: de
+    locale: de_DE.utf8
+    iso-639-1: de
+    websiteTitle: ''
+    navigationTitle: ''
+    hreflang: ''
+    direction: ''
+    flag: de
+    languageId: 0
+rootPageId: 1
+websiteTitle: ''
+routeEnhancers:
+  IndexedSearchPlugin:
+    type: Extbase
+    extension: IndexedSearch
+    plugin: Pi2
+    routes:
+      - routePath: /search
+        _controller: 'Search::search'
+        _arguments:
+          page: '@widget_0/currentPage'
+    defaultController: 'Search::search'
+  NewsEvents:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    namespace: 'tx_eventnews_newsmonth'
+    routes:
+      - routePath: '/{year}/{month}'
+        _controller: 'News::month'
+        _arguments:
+          month: 'overwriteDemand/month'
+          year: 'overwriteDemand/year'
+        requirements:
+          month: '\d+'
+          year: '\d+'
+      - routePath: '/{year}/{month}/{day}'
+        _controller: 'News::month'
+        _arguments:
+          day: 'overwriteDemand/day'
+          month: 'overwriteDemand/month'
+          year: 'overwriteDemand/year'
+        requirements:
+          day: '\d+'
+          month: '\d+'
+          year: '\d+'
+    aspects:
+      day:
+        type: StaticDayMapper
+      month:
+        type: StaticValueMapper
+        map:
+          01: '1'
+          02: '2'
+          03: '3'
+          04: '4'
+          05: '5'
+          06: '6'
+          07: '7'
+          08: '8'
+          09: '9'
+          10: '10'
+          11: '11'
+          12: '12'
+      year:
+        type: StaticYearMapper
+  News:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    routes:
+      - routePath: '/'
+        _controller: 'News::list'
+      - routePath: '/page-{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: 'currentPage'
+      - routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
+      - routePath: '/{category-name}'
+        _controller: 'News::list'
+        _arguments:
+          category-name: 'overwriteDemand/categories'
+      - routePath: '/{tag-name}'
+        _controller: 'News::list'
+        _arguments:
+          tag-name: 'overwriteDemand/tags'
+      - routePath: '/{year}/{month}'
+        _controller: 'News::month'
+        _arguments:
+          month: 'overwriteDemand/month'
+          year: 'overwriteDemand/year'
+        requirements:
+          month: '\d+'
+          year: '\d+'
+      - routePath: '/{year}/{month}/{day}'
+        _controller: 'News::month'
+        _arguments:
+          day: 'overwriteDemand/day'
+          month: 'overwriteDemand/month'
+          year: 'overwriteDemand/year'
+        requirements:
+          day: '\d+'
+          month: '\d+'
+          year: '\d+'
+    defaultController: 'News::list'
+    defaults:
+      page: '0'
+    aspects:
+      news-title:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_news
+        routeFieldName: path_segment
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+      category-name:
+        type: PersistedAliasMapper
+        tableName: sys_category
+        routeFieldName: slug
+      tag-name:
+        type: PersistedAliasMapper
+        tableName: tx_news_domain_model_tag
+        routeFieldName: slug
+      day:
+        type: StaticDayMapper
+      month:
+        type: StaticMonthMapper
+      year:
+        type: StaticYearMapper

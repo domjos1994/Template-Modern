@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  - Copyright (c) Domjos 2023
+  -
+  - This file is part of Domjos-Modern.
+  - Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  -
+  - Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   x="0px"
+   y="0px"
+   viewBox="1558.3 -1158.3 283.5 283.5"
+   version="1.1"
+   id="svg35"
+   sodipodi:docname="gallery.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:1.04627"
+     id="rect1460-3"
+     width="128.50394"
+     height="188.97638"
+     x="1664.0841"
+     y="-1125.2611" />
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs39" />
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="3.1287478"
+     inkscape:cx="130.72322"
+     inkscape:cy="141.75"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg35"
+     inkscape:document-rotation="0" />
+  <rect
+     x="1573.4993"
+     y="-1133.1021"
+     fill="#ffffff"
+     width="247"
+     height="247"
+     id="rect25" />
+  <path
+     fill="#777"
+     d="M1576-1140.5v248h248v-248H1576L1576-1140.5z M1806.3-910.3h-212.6v-212.6h212.6V-910.3z"
+     id="path27" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.463494"
+     id="rect1460"
+     width="61.666592"
+     height="77.281586"
+     x="1599.7937"
+     y="-1115.6799" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.463494"
+     id="rect1460-35"
+     width="61.666592"
+     height="77.281586"
+     x="1668.075"
+     y="-1115.7986" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.463494"
+     id="rect1460-6"
+     width="61.666592"
+     height="77.281586"
+     x="1737.8175"
+     y="-1115.6832" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.463494"
+     id="rect1460-2"
+     width="61.666592"
+     height="77.281586"
+     x="1599.4432"
+     y="-1030.1277" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.463494"
+     id="rect1460-35-9"
+     width="61.666592"
+     height="77.281586"
+     x="1667.7245"
+     y="-1030.2463" />
+  <rect
+     style="fill:#3c3c3c;fill-opacity:1;stroke-width:0.463494"
+     id="rect1460-6-1"
+     width="61.666592"
+     height="77.281586"
+     x="1737.467"
+     y="-1030.131" />
+</svg>

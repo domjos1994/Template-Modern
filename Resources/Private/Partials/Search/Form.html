@@ -1,0 +1,38 @@
+<f:comment>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+  -->
+</f:comment>
+
+<div class="tx-indexedsearch-searchbox">
+    <f:form action="search" method="post" id="tx_indexedsearch" class="d-flex" pageUid="{settings.targetPid}">
+        <div class="tx-indexedsearch-hidden-fields">
+            <f:form.hidden name="search[_sections]" value="0" />
+            <f:form.hidden name="search[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_" />
+            <f:form.hidden name="search[pointer]" id="tx_indexedsearch_pointer" value="0" />
+            <f:form.hidden name="search[ext]" value="{searchParams.ext}" />
+            <f:form.hidden name="search[searchType]" value="{searchParams.searchType}" />
+            <f:form.hidden name="search[defaultOperand]" value="{searchParams.defaultOperand}" />
+            <f:form.hidden name="search[mediaType]" value="{searchParams.mediaType}" />
+            <f:form.hidden name="search[sortOrder]" value="{searchParams.sortOrder}" />
+            <f:form.hidden name="search[group]" value="{searchParams.group}" />
+            <f:form.hidden name="search[languageUid]" value="{searchParams.languageUid}" />
+            <f:form.hidden name="search[desc]" value="{searchParams.desc}" />
+            <f:form.hidden name="search[numberOfResults]" value="{searchParams.numberOfResults}" />
+            <f:form.hidden name="search[extendedSearch]" value="{searchParams.extendedSearch}" />
+        </div>
+        <div class="input-group me-2">
+            <f:form.textfield name="search[sword]" value="{sword}" id="tx-indexedsearch-searchbox-sword" class="form-control tx-indexedsearch-searchbox-sword"/>
+            <f:form.button name="search[submitButton]" type="submit" value="{f:translate(key: 'form.submit')}" id="tx-indexedsearch-searchbox-button-submit" class="tx-indexedsearch-searchbox-button btn btn-secondary">
+                <i class="fas fa-search"></i>
+            </f:form.button>
+        </div>
+    </f:form>
+</div>

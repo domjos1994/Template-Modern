@@ -1,0 +1,6 @@
+TCAdefaults {
+    pages {
+        backend_layout = pagets__layout_4_columns
+        layout = 20
+    }
+}

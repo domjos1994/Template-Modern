@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="domjos_modern">
+        <header/>
+        <body>
+            <trans-unit id="cce.1col.bgo.header">
+                <source>Background</source>
+                <target>Hintergrund</target>
+            </trans-unit>
+            <trans-unit id="cce.1col.bgo.content">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="cce.1col.bg.title">
+                <source>1 Column, Background, Parallax</source>
+                <target>1 Spalte, Hintergrund, Parallax</target>
+            </trans-unit>
+            <trans-unit id="cce.1col.bg.description">
+                <source>1 Column with Background and parallax-effect!</source>
+                <target>1 Spalte mit Hintergrund und Parallax-Effekt!</target>
+            </trans-unit>
+
+            <trans-unit id="cce.3col.bg.title">
+                <source>3 Columns, Background, Parallax</source>
+                <target>3 Spalten, Hintergrund, Parallax</target>
+            </trans-unit>
+            <trans-unit id="cce.3col.bg.description">
+                <source>3 Columns with Background and Parallax-Effect!</source>
+                <target>3 Spalten mit Hintergrund und Parallax-Effekt!</target>
+            </trans-unit>
+            <trans-unit id="cce.3col.bg.content1">
+                <source>Content 1</source>
+                <target>Inhalt 1</target>
+            </trans-unit>
+            <trans-unit id="cce.3col.bg.content2">
+                <source>Content 2</source>
+                <target>Inhalt 2</target>
+            </trans-unit>
+            <trans-unit id="cce.3col.bg.content3">
+                <source>Content 3</source>
+                <target>Inhalt 3</target>
+            </trans-unit>
+
+            <trans-unit id="cce.2col.bg.title">
+                <source>2 Columns, Background, Parallax</source>
+                <target>2 Spalten, Hintergrund, Parallax</target>
+            </trans-unit>
+            <trans-unit id="cce.2col.bg.description">
+                <source>2 Columns with Background and Parallax-Effect!</source>
+                <target>2 Spalten mit Hintergrund und Parallax-Effekt!</target>
+            </trans-unit>
+            <trans-unit id="cce.2col.position">
+                <source>Position</source>
+                <target>Verteilung</target>
+            </trans-unit>
+            <trans-unit id="cce.2col.position.3090">
+                <source>25% to 75%</source>
+                <target>25% zu 75%</target>
+            </trans-unit>
+            <trans-unit id="cce.2col.position.4080">
+                <source>33% to 66%</source>
+                <target>33% zu 66%</target>
+            </trans-unit>
+            <trans-unit id="cce.2col.position.8040">
+                <source>66% to 33%</source>
+                <target>66% zu 33%</target>
+            </trans-unit>
+            <trans-unit id="cce.2col.position.9030">
+                <source>75% to 25%</source>
+                <target>75% zu 25%</target>
+            </trans-unit>
+
+            <trans-unit id="cce.card.title">
+                <source>Card</source>
+                <target>Karte</target>
+            </trans-unit>
+            <trans-unit id="cce.card.description">
+                <source>Bootstrap Card</source>
+                <target>Bootstrap Karte</target>
+            </trans-unit>
+            <trans-unit id="cce.card.header">
+                <source>Picture of the head</source>
+                <target>Bild im Kopf</target>
+            </trans-unit>
+            <trans-unit id="cce.card.content">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="cce.card.footer">
+                <source>Footer</source>
+                <target>Fußbereich</target>
+            </trans-unit>
+            <trans-unit id="cce.card.layout.material">
+                <source>Material-Card</source>
+                <target>Material-Karte</target>
+            </trans-unit>
+
+            <trans-unit id="cce.video.bg.title">
+                <source>Content, Background-Video</source>
+                <target>Inhalt, Hintergrund-Video</target>
+            </trans-unit>
+            <trans-unit id="cce.video.bg.description">
+                <source>Content with Background-Video</source>
+                <target>Inhalt mit Hintergrund-Video</target>
+            </trans-unit>
+            <trans-unit id="cce.video.bg.video">
+                <source>Video</source>
+                <target>Video</target>
+            </trans-unit>
+            <trans-unit id="cce.video.bg.content">
+                <source>Inhalt</source>
+                <target>Content</target>
+            </trans-unit>
+
+            <trans-unit id="cce.horizontal-gallery.title">
+                <source>Image-Gallery (horizontal)</source>
+                <target>Bilder-Galerie (horizontal)</target>
+            </trans-unit>
+            <trans-unit id="cce.horizontal-gallery.description">
+                <source>A Gallery, which shows images horizontally</source>
+                <target>Eine Galerie, welche Bilder horizontal anzeigt</target>
+            </trans-unit>
+            <trans-unit id="cce.horizontal-gallery.height">
+                <source>Height of the gallery (in px)</source>
+                <target>Höhe der Galerie (in px)</target>
+            </trans-unit>
+            <trans-unit id="cce.horizontal-gallery.content">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+
+            <trans-unit id="cce.slider.title">
+                <source>Slider</source>
+                <target>Slider</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.description">
+                <source>Slider, which shows the images in a Slideshow!</source>
+                <target>Slider, um Bilder in einer Slideshow zu zeigen!</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.content">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.layout.navigation">
+                <source>With Left/Right-Arrows</source>
+                <target>Mit Links/Rechts-Pfeilen</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.layout.dotted">
+                <source>With dots</source>
+                <target>Mit Punkten</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.layout.both">
+                <source>With Both</source>
+                <target>Mit Beidem</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.layout.gallery">
+                <source>Gallery</source>
+                <target>Galerie</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.velocity">
+                <source>Interval</source>
+                <target>Intervall</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.velocity.fast">
+                <source>Fast (2s)</source>
+                <target>Schnell (2s)</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.velocity.medium">
+                <source>Normal (3s)</source>
+                <target>Normal (3s)</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.velocity.slow">
+                <source>Slow (6s)</source>
+                <target>Langsam (6s)</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.caption">
+                <source>Image-Description</source>
+                <target>Bild-Beschriftung</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.caption.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.caption.description">
+                <source>Description</source>
+                <target>Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="cce.slider.caption.both">
+                <source>Both</source>
+                <target>Beides</target>
+            </trans-unit>
+
+            <trans-unit id="cce.tab_pane.title">
+                <source>Tab-Pane</source>
+                <target>Tab-Panel</target>
+            </trans-unit>
+            <trans-unit id="cce.tab_pane.description">
+                <source>Tab-Pane with 1 to 3 Tabs</source>
+                <target>Tab-Panel mit 1 bis 3 Tabs</target>
+            </trans-unit>
+            <trans-unit id="cce.tab_pane.tab1">
+                <source>Tab 1</source>
+                <target>Tab 1</target>
+            </trans-unit>
+            <trans-unit id="cce.tab_pane.tab2">
+                <source>Tab 2</source>
+                <target>Tab 2</target>
+            </trans-unit>
+            <trans-unit id="cce.tab_pane.tab3">
+                <source>Tab 3</source>
+                <target>Tab 3</target>
+            </trans-unit>
+            <trans-unit id="cce.tab_pane.tab.content">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="cce.tab_pane.icon_in_tab">
+                <source>Icon within Tab</source>
+                <target>Icon im Tab</target>
+            </trans-unit>
+
+            <trans-unit id="cce.accordion.title">
+                <source>Accordion</source>
+                <target>Accordion</target>
+            </trans-unit>
+            <trans-unit id="cce.accordion.description">
+                <source>Accordion with Content as Text and Images</source>
+                <target>Accordion mit Inhalt aus Text und Bildern</target>
+            </trans-unit>
+            <trans-unit id="cce.accordion.content">
+                <source>Content</source>
+                <target>Inhalt</target>
+            </trans-unit>
+            <trans-unit id="cce.accordion.flush">
+                <source>Flush Tabs</source>
+                <target>Tabs zurücksetzen</target>
+            </trans-unit>
+
+
+            <trans-unit id="cce.bg">
+                <source>Background-Color</source>
+                <target>Hintergrund-Farbe</target>
+            </trans-unit>
+            <trans-unit id="cce.bg.light_gray">
+                <source>Lightgrey</source>
+                <target>Hellgrau</target>
+            </trans-unit>
+            <trans-unit id="cce.bg.gray">
+                <source>Grey</source>
+                <target>Grau</target>
+            </trans-unit>
+            <trans-unit id="cce.bg.dark_gray">
+                <source>Dark-grey</source>
+                <target>Dunkelgrau</target>
+            </trans-unit>
+
+            <trans-unit id="cce.col.layout.overlay">
+                <source>Overlay</source>
+                <target>Überlagerung</target>
+            </trans-unit>
+            <trans-unit id="cce.col.layout.parallax">
+                <source>Parallax</source>
+                <target>Parallax</target>
+            </trans-unit>
+            <trans-unit id="cce.col.layout.reach_inside">
+                <source>Reach Inside</source>
+                <target>Hineinragen</target>
+            </trans-unit>
+
+            <trans-unit id="cce.dm_content">
+                <source>Domjos-Modern: Content</source>
+                <target>Domjos-Modern: Inhalt</target>
+            </trans-unit>
+            <trans-unit id="cce.dm_layout">
+                <source>Domjos-Modern: Layout</source>
+                <target>Domjos-Modern: Layout</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

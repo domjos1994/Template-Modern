@@ -1,0 +1,128 @@
+{namespace events=GeorgRinger\Eventnews\ViewHelpers}
+{namespace n=GeorgRinger\News\ViewHelpers}
+<f:layout name="General" />
+
+<f:section name="content">
+	<div class="row">
+		<div class="col-md-12">
+			<h2>
+				<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.calendar.title" />
+			</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<f:link.action controller="News" action="month" arguments="{overwriteDemand:{month:previousMonthData.month,year:previousMonthData.year}}" pageUid="{currentPageId}" rel="nofollow">
+				&larr; {f:format.date(date:previousMonthData.date,format:'%m.%Y')}
+			</f:link.action>
+		</div>
+		<div class="col-md-4">
+			{f:format.date(date:currentMonthData.date,format:'%m.%Y')}
+		</div>
+		<div class="col-md-4">
+			<f:link.action controller="News" action="month" arguments="{overwriteDemand:{month:nextMonthData.month,year:nextMonthData.year}}" pageUid="{currentPageId}" rel="nofollow">
+				{f:format.date(date:nextMonthData.date,format:'%m.%Y')} &rarr;
+			</f:link.action>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<events:calendar newsList="{newsWithNoDaySupport}" demand="{demand}" firstDayOfWeek="1">
+				<table class="table">
+					<tr class="days">
+						<f:for each="{weeks.0}" as="day">
+							<th>
+								{f:format.date(date: day.ts, format: '%a')}
+							</th>
+						</f:for>
+					</tr>
+					<f:for each="{weeks}" as="week">
+						<tr>
+							<f:for each="{week}" as="day">
+								<f:render section="calday" arguments="{day:day, settings:settings}" />
+							</f:for>
+						</tr>
+					</f:for>
+				</table>
+			</events:calendar>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<h2>
+				<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.calendar.list" />
+			</h2>
+			<div class="row">
+				<f:for each="{news}" as="n">
+					<f:if condition="{overwriteDemand.day}">
+						<f:then>
+                            <f:if condition="{events:dayCompare(newsItem:n,demand:demand)}">
+                                <f:render section="listItem" arguments="{_all}" />
+							</f:if>
+						</f:then>
+						<f:else>
+							<f:render section="listItem" arguments="{_all}" />
+						</f:else>
+					</f:if>
+
+				</f:for>
+			</div>
+		</div>
+	</div>
+</f:section>
+
+<f:section name="listItem">
+	<div class="col-md-12" style="border: 1px solid #ccc;">
+		<strong>
+			<i class="fas fa-newspaper"></i>&nbsp;<n:link newsItem="{n}" settings="{settings}">{n.title}</n:link>
+			| {f:format.date(date:n.datetime,format:'%d.%m')}</strong>
+		<f:if condition="{n.organizer}||{n.location}||{n.eventEnd}">
+			<ul>
+				<f:if condition="{n.organizer}">
+					<li><strong>
+						<f:translate key="organizer" extensionName="eventnews" />
+					</strong>: {n.organizer.title}
+						<small>(uid: {n.organizer.uid})</small>
+					</li>
+				</f:if>
+				<f:if condition="{n.location}">
+					<li><strong>
+						<f:translate key="location" extensionName="eventnews" />
+					</strong>: {n.location.title}
+						<small>(uid: {n.location.uid})</small>
+					</li>
+				</f:if>
+				<f:if condition="{n.eventEnd}">
+					<li>
+						<strong>
+							<f:translate key="event_end" extensionName="eventnews" />
+						</strong>: {f:format.date(date:n.eventEnd,format:'%d.%m.%Y')}
+					</li>
+				</f:if>
+			</ul>
+		</f:if>
+	</div>
+</f:section>
+
+<f:section name="calday">
+	<td class="day{f:format.date(date: day.ts, format: 'N')} {f:if(condition: day.curmonth, then: 'curmonth', else: 'othermonth')}{f:if(condition: day.news, then: ' hasevents')}{f:if(condition: day.curday, then: ' today')}">
+		<f:if condition="{day.dayBelongsToCurrentMonth}">
+			<f:if condition="{day.news}">
+				<f:then>
+					<strong>
+						<f:link.action action="month" addQueryString="1" additionalParams="{tx_news_pi1:{overwriteDemand:{year:day.year,month:day.month,day:day.day}}}">
+							{day.day}
+						</f:link.action>
+						&nbsp;
+						<a data-bs-toggle="popover" data-bs-container="body" data-bs-placement="bottom" data-bs-content="{day.news.0.title}">
+							<i class="fas fa-newspaper"></i>
+						</a>
+					</strong>
+				</f:then>
+				<f:else>
+					{day.day}
+				</f:else>
+			</f:if>
+		</f:if>
+	</td>
+</f:section>

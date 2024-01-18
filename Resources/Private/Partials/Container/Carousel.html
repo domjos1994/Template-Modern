@@ -1,0 +1,61 @@
+<f:comment>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+  -->
+</f:comment>
+
+<div id="carousel_{children_200.0.uid}"
+     class="carousel slide"
+     data-bs-ride="carousel"
+     data-bs-interval="{f:if(condition: '{data.space_before_class}==0 || {data.space_before_class}==20', then: '3000')}{f:if(condition: '{data.space_before_class}==10', then: '2000')}{f:if(condition: '{data.space_before_class}==30', then: '6000')}">
+    <f:if condition="{data.layout} == 20 || {data.layout} == 30">
+        <div class="carousel-indicators">
+            <f:variable name="counter" value="0"/>
+            <f:for each="{children_200}" as="record" iteration="iter">
+                <f:for each="{record.files}" as="item" iteration="iter2">
+                    <button type="button" data-bs-target="#carousel_{children_200.0.uid}" data-bs-slide-to="{counter}" class="{f:if(condition: '{iter.isFirst} && {iter2.isFirst}', then: 'active')}" aria-current="true" aria-label="Slide {counter}"></button>
+                    <f:variable name="counter" value="{counter + 1}"/>
+                </f:for>
+            </f:for>
+        </div>
+    </f:if>
+    <div class="carousel-inner">
+        <f:for each="{children_200}" as="record" iteration="iter">
+            <f:for each="{record.files}" as="item" iteration="iter2">
+                <div class="carousel-item {f:if(condition: '{iter.isFirst} && {iter2.isFirst}', then: 'active')}">
+                    <div class="gradient">
+                        <f:image image="{item}" loading="lazy" class="d-block w-100"/>
+                    </div>
+
+                    <f:if condition="{data.space_after_class}!=0 && ({item.title}!='' || {item.description}!='')">
+                        <div class="carousel-caption d-none d-md-block">
+                            <f:if condition="{data.space_after_class}==10 || {data.space_after_class}==30">
+                                <p class="header">{item.title}</p>
+                            </f:if>
+                            <f:if condition="{data.space_after_class}==20 || {data.space_after_class}==30">
+                                <p>{item.description}</p>
+                            </f:if>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </f:for>
+    </div>
+    <f:if condition="{data.layout} == 10 || {data.layout} == 30">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_{children_200.0.uid}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel_{children_200.0.uid}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </f:if>
+</div>

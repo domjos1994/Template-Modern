@@ -1,0 +1,75 @@
+<f:comment>
+<!--
+~ Copyright (c) Domjos 2023
+~
+~ This file is part of Domjos-Modern.
+~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+~
+~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+-->
+</f:comment>
+
+
+<f:layout name="Default" />
+<f:section name="Main">
+    <f:if condition="{files}">
+        <ol class="list-group">
+            <f:for each="{files}" as="file" iteration="fileIterator">
+                <li class="list-group-item d-flex justify-content-between align-items-start" id="download-{file.uid}">
+                    <f:if condition="{data.layout}==10||{data.layout}==0">
+                        <div class="ms-2 me-auto">
+                            <f:if condition="{file.properties.title} || {file.properties.name}">
+                                <div class="fw-bold"><i class="fas fa-file"></i> {f:if(condition: file.properties.title, then: file.properties.title, else: file.properties.name) -> f:format.htmlspecialchars()}</div>
+                                <f:if condition="{data.uploads_description} && {file.properties.description}">
+                                    {file.properties.description}
+                                </f:if>
+                            </f:if>
+                            <f:if condition="{data.filelink_size}">
+                                <hr/>
+                                <div class="file-meta">
+                                    <f:if condition="{file.properties.size}">
+                                        <span class="size"><i class="fas fa-download"></i> <strong><f:translate id="uploads.file.sizeLabel" extensionName="haessler_design_modern"/></strong><f:format.bytes>{file.properties.size}</f:format.bytes></span>
+                                    </f:if>
+                                    <span class="date"><i class="fas fa-calendar-day"></i> <strong><f:translate id="uploads.file.dateLabel" extensionName="haessler_design_modern"/></strong><f:format.date format="d.m.Y">{f:if(condition: file.properties.modification_date, then: file.properties.modification_date, else: file.properties.creation_date)}</f:format.date></span>
+                                </div>
+                            </f:if>
+                        </div>
+
+                        <span class="badge bg-secondary rounded-pill">
+                            <a class="btn btn-secondary" href="{file.publicUrl}" title="{f:if(condition:'{file.title}',then:'{file.title}')}">
+                                <f:if condition="{file.properties.extension} == jpg || {file.properties.extension} == png || {file.properties.extension} == gif">
+                                    <f:then>
+                                        <i class="far fa-file-image"></i>
+                                    </f:then>
+                                    <f:else if="{file.properties.extension} == exe || {file.properties.extension} == zip || {file.properties.extension} == msi">
+                                        <i class="far fa-file-archive"></i>
+                                    </f:else>
+                                    <f:else if="{file.properties.extension} == doc || {file.properties.extension} == docx">
+                                        <i class="far fa-file-word"></i>
+                                    </f:else>
+                                    <f:else if="{file.properties.extension} == xls || {file.properties.extension} == xlsx || {file.properties.extension} == csv">
+                                        <i class="far fa-file-word"></i>
+                                    </f:else>
+                                    <f:else if="{file.properties.extension} == pdf">
+                                        <i class="far fa-file-pdf"></i>
+                                    </f:else>
+                                    <f:else>
+                                        <i class="far fa-file"></i>
+                                    </f:else>
+                                </f:if>
+                                 Download
+                            </a>
+                        </span>
+                    </f:if>
+                    <f:if condition="{data.layout}==20">
+                        <a class="btn btn-secondary" href="{file.publicUrl}" title="{f:if(condition:'{file.title}',then:'{file.title}')}">
+                            <div class="fw-bold"><i class="fas fa-file"></i> {f:if(condition: file.properties.title, then: file.properties.title, else: file.properties.name) -> f:format.htmlspecialchars()}</div>
+                        </a>
+                    </f:if>
+                </li>
+            </f:for>
+        </ol>
+    </f:if>
+</f:section>

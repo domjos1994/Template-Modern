@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+    <file source-language="en" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="domjos_modern">
+        <header/>
+        <body>
+            <trans-unit id="layout.one.noHeader.name">
+                <source>1 Column and no Head-Area</source>
+            </trans-unit>
+            <trans-unit id="layout.one.name">
+                <source>1 Column</source>
+            </trans-unit>
+            <trans-unit id="layout.two.name">
+                <source>2 Columns</source>
+            </trans-unit>
+            <trans-unit id="layout.three.name">
+                <source>3 Columns</source>
+            </trans-unit>
+            <trans-unit id="layout.header">
+                <source>Head-Area</source>
+            </trans-unit>
+            <trans-unit id="layout.left">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="layout.content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="layout.right">
+                <source>Right</source>
+            </trans-unit>
+
+            <trans-unit id="tinify.success.title">
+                <source>Compressed!</source>
+            </trans-unit>
+            <trans-unit id="tinify.success.msg">
+                <source>File was successfully compressed!</source>
+            </trans-unit>
+            <trans-unit id="tinify.task.title">
+                <source>Compress with Tinify</source>
+            </trans-unit>
+            <trans-unit id="tinify.task.description">
+                <source>Compress all images with Tinify</source>
+            </trans-unit>
+            <trans-unit id="tinify.task.schedule">
+                <source>The task was finished! Compressed Images: </source>
+            </trans-unit>
+            <trans-unit id="webp.task.title">
+                <source>Convert Images to Webp!</source>
+            </trans-unit>
+            <trans-unit id="webp.task.description">
+                <source>Convert all images into the Webp-Image!</source>
+            </trans-unit>
+            <trans-unit id="webp.task.success">
+                <source>The Process of converting Images was finished!</source>
+            </trans-unit>
+
+            <trans-unit id="page.layout.10">
+                <source>Fullscreen</source>
+            </trans-unit>
+            <trans-unit id="page.layout.20">
+                <source>Centered</source>
+            </trans-unit>
+
+            <trans-unit id="page.filelinks.layout.1">
+                <source>List with additional Informations!</source>
+            </trans-unit>
+            <trans-unit id="page.filelinks.layout.2">
+                <source>Only List</source>
+            </trans-unit>
+
+            <trans-unit id="dashboard.widget.documentation_widget.title">
+                <source>Documentation-Widget</source>
+            </trans-unit>
+            <trans-unit id="dashboard.widget.documentation_widget.description">
+                <source>A Widget to show the Documentation of the Template "Domjos-Modern".</source>
+            </trans-unit>
+
+            <trans-unit id="more.link">
+                <source>More</source>
+            </trans-unit>
+            <trans-unit id="back.link">
+                <source>Back</source>
+            </trans-unit>
+            <trans-unit id="news.related.links">
+                <source>Related Links</source>
+            </trans-unit>
+            <trans-unit id="news.related.news">
+                <source>Related News</source>
+            </trans-unit>
+            <trans-unit id="news.related.files">
+                <source>Related Files</source>
+            </trans-unit>
+            <trans-unit id="news.search.date">
+                <source>From / To</source>
+            </trans-unit>
+            <trans-unit id="news.search.search">
+                <source>Search</source>
+            </trans-unit>
+            <trans-unit id="news.calendar.title">
+                <source>Calendar</source>
+            </trans-unit>
+            <trans-unit id="news.calendar.list">
+                <source>List</source>
+            </trans-unit>
+            <trans-unit id="date.format">
+                <source>M/d/Y</source>
+            </trans-unit>
+            <trans-unit id="search.for">
+                <source>Search for</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

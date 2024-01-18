@@ -1,0 +1,46 @@
+<f:comment>
+    <!--
+      ~ Copyright (c) Domjos 2023
+      ~
+      ~ This file is part of Domjos-Modern.
+      ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+      ~
+      ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+      ~
+      ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+      -->
+</f:comment>
+
+<f:if condition="{headerContent.0.data.CType}=='domjos_modern_banner'">
+    <f:then>
+        <f:cObject typoscriptObjectPath="lib.banner" data="{uid: headerContent.0.data.uid}"/>
+    </f:then>
+    <f:else>
+        <div class="mb-4 bg-light rounded-3 jumbotron">
+            <div class="background">
+                <f:if condition="{headerContent.0.files.0}">
+                    <f:media
+                            file="{headerContent.0.files.0}"
+                            width="{dimensions.width}"
+                            height="{dimensions.height}"
+                            alt="header-image"
+                            title="Header-Image"
+                            loading="{settings.media.lazyLoading}"
+                            additionalAttributes="{srcset: '{f:uri.image(image: headerContent.0.files.0, maxWidth: 768)} 768w,
+                                    {f:uri.image(image: headerContent.0.files.0, maxWidth: 990)} 990w,
+                                    {f:uri.image(image: headerContent.0.files.0, maxWidth: 1200)} 1200w,
+                                    {f:uri.image(image: headerContent.0.files.0, maxWidth: 1440)} 1440w,
+                                    {f:uri.image(image: headerContent.0.files.0, maxWidth: 1900)} 1900w',
+                           sizes: '(min-width: 1200px) 50vw, 100vw'}"
+                    />
+                </f:if>
+            </div>
+            <div class="container py-5">
+                <h2 class="display-5 fw-bold">{headerContent.0.data.header}</h2>
+                <f:if condition="{headerContent.0.data.bodytext}">
+                    <f:format.html>{headerContent.0.data.bodytext}</f:format.html>
+                </f:if>
+            </div>
+        </div>
+    </f:else>
+</f:if>

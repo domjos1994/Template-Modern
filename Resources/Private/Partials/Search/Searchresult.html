@@ -1,0 +1,25 @@
+<f:comment>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+  -->
+</f:comment>
+
+<div class="tx-indexedsearch-res card">
+    <div class="card-body">
+        <h3>
+            <span class="tx-indexedsearch-icon"><i class="fas fa-file-alt"></i></span>
+            <f:if condition="{settings.displayResultNumber}"><span class="tx-indexedsearch-result-number">{row.result_number}</span></f:if>
+            <span class="tx-indexedsearch-title{row.CSSsuffix}">{row.title -> f:format.raw()}</span>
+        </h3>
+        <f:if condition="{row.headerOnly} == 0">
+            <p class="tx-indexedsearch-description">{row.description -> f:format.raw()}</p>
+        </f:if>
+    </div>
+</div>

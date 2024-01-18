@@ -1,0 +1,65 @@
+/*
+ * Copyright (c) Domjos 2023
+ *
+ * This file is part of Domjos-Modern.
+ * Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+ */
+
+.container-gallery {
+    margin: 1em;
+}
+
+.container-gallery:hover > div {
+    animation-play-state: paused;
+}
+@keyframes slide {
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: -100px;
+    }
+    100% {
+        margin-left: -200px;
+    }
+}
+.imgstrip {
+    white-space: nowrap;
+    animation: slide infinite 10s alternate;
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem 1.5rem;
+    align-items: center;
+}
+.clipped {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    filter: grayscale(70%);
+    margin: 0 -.2rem;
+    max-height: 15em;
+}
+div.container-gallery img:hover,
+div.container-gallery img:focus {
+    transform: scale(1.1);
+    transition: all 0.2s;
+    filter: none;
+}
+.imgstrip::-webkit-scrollbar {
+    /*     width: 50px; */
+    height: 5px;
+    background:  white
+    /*       -webkit-linear-gradient(0, slategray 4%, white 96%); */
+
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}

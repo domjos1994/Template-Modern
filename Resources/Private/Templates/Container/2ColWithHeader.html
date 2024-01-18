@@ -1,0 +1,123 @@
+<f:comment>
+<!--
+~ Copyright (c) Domjos 2023
+~
+~ This file is part of Domjos-Modern.
+~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+~
+~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+-->
+</f:comment>
+
+<f:asset.css identifier="{data.uid}">
+    #{data.uid} .bg {
+        background-color: {data.domjos_modern_bg_color};
+    }
+    #{data.uid} .bg_trans {
+        background-color: {data.domjos_modern_bg_color}70;
+    }
+</f:asset.css>
+
+<f:if condition="{data.domjos_modern_bg_color}">
+    <f:then>
+        <f:if condition="{children_200.0.files.0.originalFile.identifier}">
+            <f:then>
+                <f:variable name="bg_color" value="bg_trans"/>
+            </f:then>
+            <f:else>
+                <f:variable name="bg_color" value="bg"/>
+            </f:else>
+        </f:if>
+    </f:then>
+    <f:else>
+        <f:variable name="bg_color" value=""/>
+    </f:else>
+</f:if>
+<f:if condition="{data.space_before_class}==10">
+    <f:then>
+        <f:variable name="reach_inside" value="reach_inside"/>
+    </f:then>
+    <f:else>
+        <f:variable name="reach_inside" value=""/>
+    </f:else>
+</f:if>
+
+<f:variable name="pos_1" value="6" />
+<f:variable name="pos_2" value="6" />
+<f:switch expression="{data.layout}">
+    <f:case value="0">
+        <f:variable name="pos_1" value="6" />
+        <f:variable name="pos_2" value="6" />
+    </f:case>
+    <f:case value="30">
+        <f:variable name="pos_1" value="3" />
+        <f:variable name="pos_2" value="9" />
+    </f:case>
+    <f:case value="40">
+        <f:variable name="pos_1" value="4" />
+        <f:variable name="pos_2" value="8" />
+    </f:case>
+    <f:case value="80">
+        <f:variable name="pos_1" value="8" />
+        <f:variable name="pos_2" value="4" />
+    </f:case>
+    <f:case value="90">
+        <f:variable name="pos_1" value="9" />
+        <f:variable name="pos_2" value="3" />
+    </f:case>
+    <f:defaultCase>
+        <f:variable name="pos_1" value="6" />
+        <f:variable name="pos_2" value="6" />
+    </f:defaultCase>
+</f:switch>
+<f:if condition="{children_200.0.files.0.originalFile.identifier}">
+    <f:then>
+        <f:render section="background_image" arguments="{_all}"/>
+    </f:then>
+    <f:else>
+        <f:render section="background_color" arguments="{_all}"/>
+    </f:else>
+</f:if>
+
+<div id="{data.uid}">
+    <f:section name="background_image">
+        <div class="bg_img_with_text bg-non-overlay {reach_inside}">
+            <f:image image="{children_200.0.files.0}" class="bg_img"/>
+            <div class="content {bg_color}" style="">
+                <f:render partial="Header" arguments="{data: data}"/>
+                <div class="row text-center {bg_margin}">
+                    <div class="col-md-{pos_1}">
+                        <f:for each="{children_201}" as="record">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </f:for>
+                    </div>
+                    <div class="col-md-{pos_2}">
+                        <f:for each="{children_202}" as="record">
+                            <f:format.raw>{record.renderedContent}</f:format.raw>
+                        </f:for>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:section>
+
+    <f:section name="background_color">
+        <div class="bg-non-overlay {reach_inside} {bg_color}">
+            <f:render partial="Header" arguments="{data: data}"/>
+            <div class="row text-center">
+                <div class="col-md-{pos_1}">
+                    <f:for each="{children_201}" as="record">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </f:for>
+                </div>
+                <div class="col-md-{pos_2}">
+                    <f:for each="{children_202}" as="record">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </f:for>
+                </div>
+            </div>
+        </div>
+    </f:section>
+</div>

@@ -1,0 +1,77 @@
+<f:comment>
+    <!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+</f:comment>
+
+<f:asset.css identifier="{data.uid}">
+    div#c{data.uid} div.banner-content div.content p,
+    div#c{data.uid} div.banner-content div.content span {
+        color: {flexFormData.color}!important;
+        font-size: {flexFormData.content_size}em;
+    }
+    div#c{data.uid} div.banner-content h2.display-4 {
+        color: {flexFormData.color}!important;
+        font-size: {flexFormData.title_size}em;
+    }
+    div#c{data.uid} .bg {
+        background-color: {flexFormData.background_color};
+    }
+    div#c{data.uid} .opacity {
+        opacity: 0.8;
+        padding: 1em;
+    }
+</f:asset.css>
+
+<div class="jumbotron jumbotron-fluid banner {f:if(condition: '{flexFormData.show_more_link}==2||{flexFormData.show_more_link}==3',then:'hover')}" id="c{data.uid}">
+    <f:if condition="{files.0}">
+        <f:then>
+            <f:if condition="{flexFormData.banner_link}">
+                <f:then>
+                    <f:link.typolink parameter="{flexFormData.banner_link}">
+                        <f:image image="{files.0}"/>
+                        <div class="banner-content {f:if(condition: '{flexFormData.background_color}', then: 'bg opacity', else: '')}">
+                            <h2 class="display-4">{flexFormData.title}</h2>
+                            <f:if condition="{flexFormData.subtitle}">
+                                <div class="content">
+                                    {flexFormData.subtitle -> f:format.html()}
+                                </div>
+                            </f:if>
+                        </div>
+                    </f:link.typolink>
+                </f:then>
+                <f:else>
+                    <f:image image="{files.0}"/>
+                    <div class="banner-content {f:if(condition: '{flexFormData.background_color}', then: 'bg opacity', else: '')}">
+                        <h2 class="display-4">{flexFormData.title}</h2>
+                        <f:if condition="{flexFormData.subtitle}">
+                            <div class="content">
+                                {flexFormData.subtitle -> f:format.html()}
+                            </div>
+                        </f:if>
+                    </div>
+                </f:else>
+            </f:if>
+        </f:then>
+        <f:else>
+            <div class="background {f:if(condition: '{flexFormData.background_color}', then: 'bg', else: '')}">
+                <div class="banner-content">
+                    <h2 class="display-4">{flexFormData.title}</h2>
+                    <f:if condition="{flexFormData.subtitle}">
+                        <div class="content">
+                            {flexFormData.subtitle -> f:format.html()}
+                        </div>
+                    </f:if>
+                    <f:render partial="Banner_Link" arguments="{flexFormData}"/>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+</div>

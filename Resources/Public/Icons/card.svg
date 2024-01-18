@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  - Copyright (c) Domjos 2023
+  -
+  - This file is part of Domjos-Modern.
+  - Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  -
+  - Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<svg
+   x="0px"
+   y="0px"
+   viewBox="1558.3 -1158.3 283.5 283.5"
+   version="1.1"
+   id="svg35"
+   sodipodi:docname="card.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs39" />
+  <sodipodi:namedview
+     id="namedview37"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="3.1287478"
+     inkscape:cx="141.75"
+     inkscape:cy="141.75"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg35" />
+  <rect
+     x="1576"
+     y="-1140"
+     fill="#FFFFFF"
+     width="247"
+     height="247"
+     id="rect25" />
+  <path
+     fill="#777"
+     d="M1576-1140.5v248h248v-248H1576L1576-1140.5z M1806.3-910.3h-212.6v-212.6h212.6V-910.3z"
+     id="path27" />
+  <path
+     fill="#333333"
+     d="m 1783.0193,-923.32668 h -170.0787 v -49.13386 h 169.7082 z"
+     id="path29"
+     style="stroke-width:0.925177" />
+  <path
+     fill="#333333"
+     d="m 1783.0179,-1055.6479 h -170.0787 v -49.1339 h 170.0787 z"
+     id="path31"
+     style="stroke-width:0.926188" />
+  <path
+     fill="#555555"
+     d="m 1783.0179,-972.51796 h -170.0787 v -83.12994 h 170.0787 z"
+     id="path33"
+     style="stroke-width:1.20473" />
+</svg>

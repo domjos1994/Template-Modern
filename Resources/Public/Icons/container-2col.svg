@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  - Copyright (c) Domjos 2023
+  -
+  - This file is part of Domjos-Modern.
+  - Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  -
+  - Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="358.8 -1158.3 282.5 283.5">
+	<rect x="376.5" y="-1140" fill="#FFFFFF" width="247" height="247"/>
+	<path fill="#FFFFFF" d="M376-1140.5h248v248H376V-1140.5z"/>
+	<path fill="#777" d="M376-1140.5v248h248v-248H376z M393.7-1122.8h212.6v212.6H393.7C393.7-910.4,393.7-1122.8,393.7-1122.8z"/>
+	<path fill="#333" d="M510.7-1122.7h77.5v212.4h-77.5V-1122.7z"/>
+	<path fill="#333" d="M413.2-1122.8h77.5v212.7h-77.5V-1122.8z"/>
+</svg>

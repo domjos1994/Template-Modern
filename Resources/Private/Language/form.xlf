@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+    <file source-language="en" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="domjos_modern">
+        <header/>
+        <body>
+            <trans-unit id="contact-Form.element.text-1.properties.label" approved="yes">
+                <source>E-Mail-Address</source>
+            </trans-unit>
+            <trans-unit id="contact-Form.element.text-2.properties.label" approved="yes">
+                <source>First-Name</source>
+            </trans-unit>
+            <trans-unit id="contact-Form.element.text-3.properties.label" approved="yes">
+                <source>Last-Name</source>
+            </trans-unit>
+            <trans-unit id="contact-Form.element.text-4.properties.label" approved="yes">
+                <source>Subject</source>
+            </trans-unit>
+            <trans-unit id="contact-Form.element.textarea-1.properties.label" approved="yes">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="contact-Form.element.page-1.properties.label" approved="yes">
+                <source>Contact</source>
+            </trans-unit>
+            <trans-unit id="element.contact-Form.renderingOptions.submitButtonLabel" approved="yes">
+                <source>Submit</source>
+            </trans-unit>
+            <trans-unit id="element.contact-Form.renderingOptions.nextButtonLabel" approved="yes">
+                <source>Next</source>
+            </trans-unit>
+            <trans-unit id="element.contact-Form.renderingOptions.previousButtonLabel" approved="yes">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="contact-Form.validation.error.1221559976" approved="yes">
+                <source>Please enter valid email address. Thank you very much!</source>
+            </trans-unit>
+            <trans-unit id="contact-Form.finisher.Confirmation.message" approved="yes">
+                <source>Thank you for your message! We will get back to you as soon as possible.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cd55ac03-11c2-48e2-914c-86fe9206939e" name="CZ-Dillingen" url="http://webhosting49.1blu.de">
+        <fileTransfer rootFolder="/www/typo3/site" accessType="FTPS" host="webhosting49.1blu.de" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="8fb44ad0-a147-4e5f-bb34-ec97acdb06c8" name="Domjos" url="http://webhosting13.1blu.de">
+        <fileTransfer rootFolder="/www/domjos_test/template" accessType="FTPS" host="webhosting13.1blu.de" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

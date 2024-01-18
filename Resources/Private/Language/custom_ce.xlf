@@ -1,0 +1,56 @@
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+    <file source-language="en" datatype="plaintext" original="messages" date="2011-10-18T18:20:51Z" product-name="domjos_modern">
+        <header/>
+        <body>
+            <trans-unit id="banner.title">
+                <source>Banner</source>
+            </trans-unit>
+            <trans-unit id="banner.description">
+                <source>Add a Banner. It is an Image with text in the foreground.</source>
+            </trans-unit>
+
+            <trans-unit id="banner.ce.title">
+                <source>Title of the banner</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.content">
+                <source>Content of the banner</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.image">
+                <source>Image of the banner</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.background_color">
+                <source>Color of the background</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.color">
+                <source>Text-Color</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.title.size">
+                <source>Size of Title</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.content.size">
+                <source>Size of Content</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.link">
+                <source>Link</source>
+            </trans-unit>
+
+            <trans-unit id="banner.ce.showMoreLink">
+                <source>Show 'More'-Link</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.hover_effect">
+                <source>Hover-Effect</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

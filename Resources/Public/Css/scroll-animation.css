@@ -1,0 +1,120 @@
+/*
+ * Copyright (c) Domjos 2023
+ *
+ * This file is part of Domjos-Modern.
+ * Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+ */
+
+/**
+    horizontal:
+    <div class="scroll-hor">
+        <div class="mousex">
+            <div class="scroller"></div>
+        </div>
+    </div>
+    vertical:
+    <div class="scroll-ver">
+        <div class="mousey">
+            <div class="scroller"></div>
+        </div>
+    </div>
+ */
+
+div.scroll-hor {
+    padding: 1em;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items:  center;
+}
+
+div.scroll-hor div.mousex {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 32px;
+    height: 23px;
+    width: 43px;
+    margin: 0 auto;
+}
+
+div.scroll-hor div.mousex div.scroller {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 8px;
+    background-color: #fff;
+    position: relative;
+    height: 3px;
+    width: 3px;
+    top: 8px;
+    margin: 0 auto;
+    -webkit-animation: wheel_animation 1.2s linear infinite;
+    animation: wheel_animation 1.2s linear infinite;
+}
+
+@-webkit-keyframes wheel_animation {
+    0% {
+        opacity: 0;
+        right: -16px;
+    }
+    50% {
+        opacity: 1;
+        right: 0;
+    }
+    100% {
+        opacity: 0;
+        right: 15px;
+    }
+}
+
+@keyframes wheel_animation {
+    0% {
+        opacity: 0;
+        right: -16px;
+    }
+    50% {
+        opacity: 1;
+        right: 0;
+    }
+    100% {
+        opacity: 0;
+        right: 15px;
+    }
+}
+
+div.scroll-ver {
+    margin: auto;
+
+    width :34px;
+    height: 55px;
+}
+
+div.scroll-ver div.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+div.scroll-ver div.mousey div.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+}
+@keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+}

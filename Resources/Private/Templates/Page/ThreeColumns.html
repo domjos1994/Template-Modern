@@ -1,0 +1,69 @@
+<!--suppress ALL -->
+<f:comment>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+  -->
+</f:comment>
+
+<f:layout name="Default"/>
+<f:section name="Main">
+    <main role="main">
+        <f:if condition="{data.layout}">
+            <f:then>
+                <f:if condition="{data.layout}==20">
+                    <f:then>
+                        <f:variable name="container" value="container"/>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="container" value="container-fluid"/>
+                    </f:else>
+                </f:if>
+            </f:then>
+            <f:else>
+                <f:variable name="container" value="container"/>
+            </f:else>
+        </f:if>
+        <!--TYPO3SEARCH_begin-->
+        <f:render partial="Jumbotron" arguments="{headerContent: headerContent}"/>
+        <div class="{container}">
+            <div class="row mainRow">
+                <div class="col-md-3">
+                    <f:for each="{sidebarContent2}" as="contentElement">
+                        <f:cObject
+                                typoscriptObjectPath="tt_content.{contentElement.data.CType}"
+                                data="{contentElement.data}"
+                                table="tt_content"
+                        />
+                    </f:for>
+                </div>
+                <div class="col-md-6">
+                    <f:for each="{mainContent}" as="contentElement">
+                        <f:cObject
+                                typoscriptObjectPath="tt_content.{contentElement.data.CType}"
+                                data="{contentElement.data}"
+                                table="tt_content"
+                        />
+                    </f:for>
+                </div>
+                <div class="col-md-3">
+                    <f:for each="{sidebarContent}" as="sidebarElement">
+                        <f:cObject
+                                typoscriptObjectPath="tt_content.{sidebarElement.data.CType}"
+                                data="{sidebarElement.data}"
+                                table="tt_content"
+                        />
+                    </f:for>
+                </div>
+            </div>
+        </div>
+        <!--TYPO3SEARCH_end-->
+        <f:render partial="BackgroundSlider" arguments="{_all}"/>
+    </main>
+</f:section>

@@ -1,0 +1,85 @@
+<f:comment>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+  -->
+</f:comment>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="{base_url}">
+            <f:if condition="{icon}">
+                <img src="{icon}" alt="Header-Icon of site" title="{title}" height="24" width="100">
+            </f:if>
+            <f:if condition="{showTitle}">
+                <f:then>
+                    <h1>{title} - {subheader}</h1>
+                </f:then>
+                <f:else>
+                    <h1 class="hidden">{title} - {subheader}</h1>
+                </f:else>
+            </f:if>
+        </a>
+        <button aria-controls="main_nav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#main_nav"
+                data-bs-toggle="collapse"
+                type="button"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav mr-auto me-auto mb-2 mb-lg-0">
+                <f:for each="{mainnavigation}" as="mainnavigationItem">
+                    <f:if condition="{mainnavigationItem.children}">
+                        <f:then>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle {f:if(condition: mainnavigationItem.active, then: 'active')}"
+                                    href="#"
+                                   target="{mainnavigationItem.target}"
+                                   title="{mainnavigationItem.title}"
+                                    id="{mainnavigationItem.data.uid}"
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    {mainnavigationItem.title}
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="{mainnavigationItem.data.uid}">
+                                    <f:for each="{mainnavigationItem.children}" as="level2">
+                                        <li>
+                                            <a class="dropdown-item {f:if(condition: level2.active, then: 'active')}"
+                                               href="{level2.link}" target="{level2.target}" title="{level2.title}">{level2.title}</a>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </li>
+                        </f:then>
+                        <f:else>
+                            <li class="nav-item">
+                                <a class="nav-link {f:if(condition: mainnavigationItem.active, then: 'active')}"
+                                   href="{mainnavigationItem.link}"
+                                   target="{mainnavigationItem.target}"
+                                   title="{mainnavigationItem.title}">
+                                    {mainnavigationItem.title}
+                                </a>
+                            </li>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </ul>
+            <f:render partial="Navigation/LangNavigation" arguments="{_all}"/>
+            <f:if condition="{search_uid} != '{$plugin.tx_indexedsearch.settings.targetPid}'">
+                <f:if condition="{data.uid} != {search_uid}">
+                    <f:cObject typoscriptObjectPath="lib.searchBox" />
+                </f:if>
+            </f:if>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,47 @@
+<f:comment>
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+  -->
+</f:comment>
+
+<f:variable name="flush" value=""/>
+<f:if condition="{data.layout}==10">
+    <f:variable name="flush" value=" accordion-flush"/>
+</f:if>
+
+<f:if condition="{f:count(subject: children_100)}!=0">
+    <f:then>
+        <div class="accordion{flush}" id="accordion_{data.uid}">
+            <f:for each="{children_100}" as="record" iteration="iter">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading_{iter.index}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{iter.index}" aria-expanded="false" aria-controls="collapse_{iter.index}">
+                            {record.header}
+                        </button>
+                    </h2>
+                    <div>
+                        <f:if condition="{data.layout}==10">
+                            <f:then>
+                                <div id="collapse_{iter.index}" class="accordion-collapse collapse" aria-labelledby="heading_{iter.index}">
+                                    <div class="accordion-body"><f:format.raw>{record.bodytext}</f:format.raw></div>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <div id="collapse_{iter.index}" class="accordion-collapse collapse" aria-labelledby="heading_{iter.index}" data-bs-parent='#accordion_{data.uid}'>
+                                    <div class="accordion-body"><f:format.raw>{record.bodytext}</f:format.raw></div>
+                                </div>
+                            </f:else>
+                        </f:if>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:then>
+</f:if>

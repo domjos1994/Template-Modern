@@ -1,0 +1,22 @@
+<html
+	xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+
+<f:section name="content">
+	<n:searchForm class="news-search-form" object="{search}" name="search" pageUid="{settings.listPid}">
+		<div class="input-group mb-3">
+			<span class="input-group-text"><f:translate key="search-subject" /></span>
+			<f:form.textfield id="news-subject" property="subject" class="form-control" />
+		</div>
+
+		<div class="input-group mb-3">
+			<span class="input-group-text"><f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.search.date" /></span>
+			<f:form.textfield id="news-minimumDate" property="minimumDate" type="date" class="form-control" />
+			<f:form.textfield id="news-maximumDate" property="maximumDate" type="date" class="form-control" />
+		</div>
+
+		<f:form.submit value="{f:translate(key:'LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.search.search')}" class="btn btn-secondary mb-3" />
+	</n:searchForm>
+</f:section>
+</html>

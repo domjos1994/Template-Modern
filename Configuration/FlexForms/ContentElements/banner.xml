@@ -1,0 +1,225 @@
+<!--
+  ~ Copyright (c) Domjos 2023
+  ~
+  ~ This file is part of Domjos-Modern.
+  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
+  -->
+
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <main>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.title</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <title>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title</label>
+                            <config>
+                                <type>input</type>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </title>
+                    <subtitle>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content</label>
+                            <config>
+                                <type>text</type>
+                                <enableRichtext>1</enableRichtext>
+                            </config>
+                        </TCEforms>
+                    </subtitle>
+                    <image>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.image</label>
+                            <config>
+                                <type>inline</type>
+                                <maxitems>1</maxitems>
+                                <foreign_table>sys_file_reference</foreign_table>
+                                <foreign_table_field>tablenames</foreign_table_field>
+                                <foreign_label>uid_local</foreign_label>
+                                <foreign_sortby>sorting_foreign</foreign_sortby>
+                                <foreign_field>uid_foreign</foreign_field>
+                                <foreign_selector>uid_local</foreign_selector>
+                                <foreign_selector_fieldTcaOverride>
+                                    <config>
+                                        <appearance>
+                                            <elementBrowserType>file</elementBrowserType>
+                                            <elementBrowserAllowed>gif,jpg,jpeg,png,svg</elementBrowserAllowed>
+                                        </appearance>
+                                    </config>
+                                </foreign_selector_fieldTcaOverride>
+                                <foreign_types type="array">
+                                    <numIndex index="0">
+                                        <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
+                                    </numIndex>
+                                </foreign_types>
+                                <foreign_match_fields>
+                                    <fieldname>pi_flexform_banner</fieldname>
+                                </foreign_match_fields>
+                                <appearance type="array">
+                                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
+                                    <headerThumbnail>
+                                        <field>uid_local</field>
+                                        <height>64</height>
+                                        <width>64</width>
+                                    </headerThumbnail>
+                                    <enabledControls>
+                                        <info>1</info>
+                                        <new>0</new>
+                                        <dragdrop>0</dragdrop>
+                                        <sort>1</sort>
+                                        <hide>0</hide>
+                                        <delete>1</delete>
+                                        <localize>1</localize>
+                                    </enabledControls>
+                                    <createNewRelationLinkTitle>LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference</createNewRelationLinkTitle>
+                                </appearance>
+                                <behaviour>
+                                    <localizationMode>select</localizationMode>
+                                    <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
+                                </behaviour>
+                                <overrideChildTca>
+                                    <columns type="array">
+                                        <uid_local type="array">
+                                            <config type="array">
+                                                <appearance type="array">
+                                                    <elementBrowserType>file</elementBrowserType>
+                                                    <elementBrowserAllowed>jpg,jpeg,png,svg,gif</elementBrowserAllowed>
+                                                </appearance>
+                                            </config>
+                                        </uid_local>
+                                    </columns>
+                                    <types type="array">
+                                        <numIndex index="2">
+                                            <showitem>alternative, title,--palette--;;filePalette</showitem>
+                                        </numIndex>
+                                    </types>
+                                </overrideChildTca>
+                            </config>
+                        </TCEforms>
+                    </image>
+                    <banner_link>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.link</label>
+                            <config>
+                                <type>input</type>
+                                <renderType>inputLink</renderType>
+                            </config>
+                        </TCEforms>
+                    </banner_link>
+                    <background_color>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.background_color</label>
+                            <config>
+                                <type>input</type>
+                                <renderType>colorpicker</renderType>
+                                <size>6</size>
+                                <wizards>
+                                    <color>
+                                        <type>colorbox</type>
+                                        <dim>212x18</dim>
+                                        <tableStyle>border:solid 1px black;</tableStyle>
+                                        <script>wizard_colorpicker.php</script>
+                                        <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                        <module type="array">
+                                            <name>wizard_colorpicker</name>
+                                            <urlParameters type="array"/>
+                                        </module>
+                                    </color>
+                                </wizards>
+                                <eval>#555555</eval>
+                                <default/>
+                            </config>
+                        </TCEforms>
+                    </background_color>
+                    <color>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.color</label>
+                            <config>
+                                <type>input</type>
+                                <renderType>colorpicker</renderType>
+                                <size>6</size>
+                                <wizards>
+                                    <color>
+                                        <type>colorbox</type>
+                                        <dim>212x18</dim>
+                                        <tableStyle>border:solid 1px black;</tableStyle>
+                                        <script>wizard_colorpicker.php</script>
+                                        <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                        <module type="array">
+                                            <name>wizard_colorpicker</name>
+                                            <urlParameters type="array"/>
+                                        </module>
+                                    </color>
+                                </wizards>
+                                <eval>#555555</eval>
+                                <default/>
+                            </config>
+                        </TCEforms>
+                    </color>
+                    <title_size>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title.size</label>
+                            <config>
+                                <type>number</type>
+                                <eval>double2</eval>
+                                <range>
+                                    <lower>1</lower>
+                                    <upper>20</upper>
+                                </range>
+                                <default>5</default>
+                            </config>
+                        </TCEforms>
+                    </title_size>
+                    <content_size>
+                        <TCEforms>
+                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content.size</label>
+                            <config>
+                                <type>number</type>
+                                <eval>double2</eval>
+                                <range>
+                                    <lower>1</lower>
+                                    <upper>20</upper>
+                                </range>
+                                <default>3</default>
+                            </config>
+                        </TCEforms>
+                    </content_size>
+                    <show_more_link>
+                        <TCEforms>
+                            <label/>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.showMoreLink</numIndex>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.hover_effect</numIndex>
+                                        <numIndex index="1"/>
+                                    </numIndex>
+                                </items>
+                                <cols>2</cols>
+                            </config>
+                        </TCEforms>
+                    </show_more_link>
+                </el>
+            </ROOT>
+        </main>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,128 @@
+RTE.default.preset = domjos_modern
+
+tx_news.templateLayouts {
+    12 = Landing-Page
+}
+TCEFORM {
+    pages {
+        layout {
+            removeItems = 1,2,3
+            addItems {
+                10 = LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:page.layout.10
+                20 = LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:page.layout.20
+            }
+        }
+    }
+    tt_content {
+        header_layout {
+            removeItems = 1
+        }
+
+        layout {
+            types {
+                uploads {
+                    removeItems = 1,2,3
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:page.filelinks.layout.1
+                        20 = LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:page.filelinks.layout.2
+                    }
+                }
+                slider {
+                   removeItems = 1,2,3
+                   addItems {
+                       10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.layout.navigation
+                       20 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.layout.dotted
+                       30 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.layout.both
+                       40 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.layout.gallery
+                   }
+                }
+                1col-with-header {
+                    removeItems = 1,2,3
+                    addItems {
+                        30 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.overlay
+                        40 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.parallax
+                    }
+                }
+                2col-with-header {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.2col.position
+                    removeItems = 1,2,3
+                    addItems {
+                        30 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.2col.position.3090
+                        40 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.2col.position.4080
+                        80 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.2col.position.8040
+                        90 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.2col.position.9030
+                    }
+                }
+                card {
+                    removeItems = 1,2,3
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.card.layout.material
+                    }
+                }
+                accordion {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.accordion.flush
+                    removeItems = 1,2,3
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.accordion.flush
+                    }
+                }
+            }
+        }
+
+        space_before_class {
+            types {
+                slider {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.velocity
+                    removeItems = extra-small,small,medium,large,extra-large
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.velocity.fast
+                        20 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.velocity.medium
+                        30 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.velocity.slow
+                    }
+                }
+                1col-with-header {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.reach_inside
+                    removeItems = extra-small,small,medium,large,extra-large
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.reach_inside
+                    }
+                }
+                2col-with-header {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.reach_inside
+                    removeItems = extra-small,small,medium,large,extra-large
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.reach_inside
+                    }
+                }
+                3col-with-header {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.reach_inside
+                    removeItems = extra-small,small,medium,large,extra-large
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.col.layout.reach_inside
+                    }
+                }
+            }
+        }
+        space_after_class {
+            types {
+                slider {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.caption
+                    removeItems = extra-small,small,medium,large,extra-large
+                    addItems {
+                        10 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.caption.title
+                        20 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.caption.description
+                        30 = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.slider.caption.both
+                    }
+                }
+            }
+        }
+
+        subheader {
+            types {
+                tab-pane {
+                    label = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.tab_pane.icon_in_tab
+                }
+            }
+        }
+    }
+}

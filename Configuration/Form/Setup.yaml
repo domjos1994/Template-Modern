@@ -1,0 +1,26 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          110: EXT:domjos_modern/Resources/Private/Forms/
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateVariant: version2
+                translation:
+                  translationFiles:
+                    110: 'EXT:domjos_modern/Resources/Private/Language/form.xlf'
+                layoutRootPaths:
+                  20: 'EXT:domjos_modern/Resources/Private/Layouts/Form/'
+                templateRootPaths:
+                  20: 'EXT:domjos_modern/Resources/Private/Templates/Form/'
+                partialRootPaths:
+                  20: 'EXT:domjos_modern/Resources/Private/Partials/Form/'
+            ImageUpload:
+              properties:
+                imageLinkMaxWidth: 1200
+                imageMaxWidth: 200
+                imageMaxHeight: 200

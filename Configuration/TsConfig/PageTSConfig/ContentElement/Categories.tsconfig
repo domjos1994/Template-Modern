@@ -1,0 +1,5 @@
+mod.wizards.newContentElement.wizardItems {
+    # CATEGORIES
+    dm_content.header = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.dm_content
+    dm_layout.header = LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf:cce.dm_layout
+}

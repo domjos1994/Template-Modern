@@ -1,0 +1,96 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: contact-Form
+label: Contact-Form
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{text-4}'
+      recipients:
+        '{text-1}': '{text-2} {text-3}'
+      senderAddress: developing@domjos.de
+      senderName: Developing
+      addHtmlPart: true
+      attachUploads: true
+      title: ''
+    identifier: EmailToSender
+  -
+    options:
+      subject: '{text-4}'
+      recipients:
+        developing@domjos.de: Developing
+      senderAddress: '{text-1}'
+      senderName: '{text-2}  {text-3}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'Form submitted successfully!'
+      contentElementUid: ''
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: Step
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: First-Name
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-3
+            label: Last-Name
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: E-Mail
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-4
+        label: Subject
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Content
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty

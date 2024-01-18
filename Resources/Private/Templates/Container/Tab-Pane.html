@@ -1,0 +1,149 @@
+<f:comment>
+    <!--
+    ~ Copyright (c) Domjos 2023
+    ~
+    ~ This file is part of Domjos-Modern.
+    ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+    ~
+    ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+    ~
+    ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+    -->
+</f:comment>
+
+<f:asset.css identifier="{data.uid}">
+    #{data.uid} .bg {
+        background-color: {data.domjos_modern_bg_color};
+    }
+    #{data.uid} .emptyTab {
+        width: 0;
+    }
+    #{data.uid} .fullTab {
+        width: 100%;
+    }
+    #{data.uid} .halfTab {
+        width: 50%;
+    }
+    #{data.uid} .thirdTab {
+        width: 33.33%;
+    }
+</f:asset.css>
+
+<f:if condition="{data.domjos_modern_bg_color}">
+    <f:then>
+        <f:variable name="bg_color" value="bg"/>
+    </f:then>
+    <f:else>
+        <f:variable name="bg_color" value=""/>
+    </f:else>
+</f:if>
+
+<f:if condition="{f:count(subject: children_100)}==0">
+    <f:then>
+        <f:if condition="{f:count(subject: children_101)}==0">
+            <f:then>
+                <f:variable name="styleTab1" value="emptyTab"/>
+                <f:variable name="styleTab2" value="emptyTab"/>
+                <f:variable name="styleTab3" value="fullTab"/>
+            </f:then>
+            <f:else>
+                <f:if condition="{f:count(subject: children_102)}==0">
+                    <f:then>
+                        <f:variable name="styleTab1" value="emptyTab"/>
+                        <f:variable name="styleTab2" value="fullTab"/>
+                        <f:variable name="styleTab3" value="emptyTab"/>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="styleTab1" value="emptyTab"/>
+                        <f:variable name="styleTab2" value="width: 50%"/>
+                        <f:variable name="styleTab3" value="width: 50%"/>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:then>
+    <f:else>
+        <f:if condition="{f:count(subject: children_101)}==0">
+            <f:then>
+                <f:if condition="{f:count(subject: children_102)}==0">
+                    <f:then>
+                        <f:variable name="styleTab1" value="fullTab"/>
+                        <f:variable name="styleTab2" value="emptyTab"/>
+                        <f:variable name="styleTab3" value="emptyTab"/>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="styleTab1" value="halfTab"/>
+                        <f:variable name="styleTab2" value="emptyTab"/>
+                        <f:variable name="styleTab3" value="halfTab"/>
+                    </f:else>
+                </f:if>
+            </f:then>
+            <f:else>
+                <f:if condition="{f:count(subject: children_102)}==0">
+                    <f:then>
+                        <f:variable name="styleTab1" value="halfTab"/>
+                        <f:variable name="styleTab2" value="halfTab"/>
+                        <f:variable name="styleTab3" value="emptyTab"/>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="styleTab1" value="thirdTab"/>
+                        <f:variable name="styleTab2" value="thirdTab"/>
+                        <f:variable name="styleTab3" value="thirdTab"/>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>
+
+<div class="tab-pane {bg_color}" id="{data.uid}">
+    <div class="container">
+        <f:render partial="Header" arguments="{data: data}"/>
+        <ul class="nav nav-tabs" role="tablist">
+            <f:if condition="{f:count(subject: children_100)}!=0">
+                <f:then>
+                    <li class="nav-item {styleTab1}" role="presentation">
+                        <button class="nav-link active" id="tab-tab1" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
+                            <span class="heart"><f:format.raw>{data.subheader}</f:format.raw></span> <span class="text">{children_100.0.header}</span>
+                        </button>
+                    </li>
+                </f:then>
+            </f:if>
+            <f:if condition="{f:count(subject: children_101)}!=0">
+                <f:then>
+                    <li class="nav-item {styleTab2}" role="presentation">
+                        <button class="nav-link" id="tab-tab2" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2">
+                            <span class="heart"><f:format.raw>{data.subheader}</f:format.raw></span> <span class="text">{children_101.0.header}</span>
+                        </button>
+                    </li>
+                </f:then>
+            </f:if>
+            <f:if condition="{f:count(subject: children_102)}!=0">
+                <f:then>
+                    <li class="nav-item {styleTab3}" role="presentation">
+                        <button class="nav-link" id="tab-tab3" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3">
+                            <span class="heart"><f:format.raw>{data.subheader}</f:format.raw></span> <span class="text">{children_102.0.header}</span>
+                        </button>
+                    </li>
+                </f:then>
+            </f:if>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="nav-tab1-tab">
+                <f:for each="{children_200}" as="record">
+                    <f:format.raw>{record.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="nav-tab2-tab">
+                <f:for each="{children_201}" as="record">
+                    <f:format.raw>{record.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="nav-tab3-tab">
+                <f:for each="{children_202}" as="record">
+                    <f:format.raw>{record.renderedContent}</f:format.raw>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</div>

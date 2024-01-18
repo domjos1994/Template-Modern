@@ -1,0 +1,353 @@
+# extension content container element
+# you need extension 'content container element' and 'content defender'
+tt_content.1col-with-header-overlay < lib.contentElement
+tt_content.1col-with-header-overlay {
+    templateName = 1ColWithHeaderOverlay
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+            }
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 201
+            as = children_201
+        }
+    }
+}
+tt_content.1col-with-header < lib.contentElement
+tt_content.1col-with-header {
+    templateName = 1ColWithHeader
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+            }
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 201
+            as = children_201
+        }
+    }
+}
+
+tt_content.2col-with-header < lib.contentElement
+tt_content.2col-with-header {
+    templateName = 2ColWithHeader
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+            }
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 201
+            as = children_201
+        }
+        300 = B13\Container\DataProcessing\ContainerProcessor
+        300 {
+            colPos = 202
+            as = children_202
+        }
+    }
+}
+
+tt_content.3col-with-header < lib.contentElement
+tt_content.3col-with-header {
+    templateName = 3ColWithHeader
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+            }
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 201
+            as = children_201
+        }
+        300 = B13\Container\DataProcessing\ContainerProcessor
+        300 {
+            colPos = 202
+            as = children_202
+        }
+        400 = B13\Container\DataProcessing\ContainerProcessor
+        400 {
+            colPos = 203
+            as = children_203
+        }
+    }
+}
+
+tt_content.card < lib.contentElement
+tt_content.card {
+    templateName = Card
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+            }
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 201
+            as = children_201
+        }
+        300 = B13\Container\DataProcessing\ContainerProcessor
+        300 {
+            colPos = 202
+            as = children_202
+        }
+    }
+}
+
+tt_content.bg-video < lib.contentElement
+tt_content.bg-video {
+    templateName = BGVideo
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+            dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            dataProcessing.10 {
+                references.fieldName = assets
+                references.table = tt_content
+                as = children
+            }
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 201
+            as = children_201
+        }
+    }
+}
+
+tt_content.slider < lib.contentElement
+tt_content.slider {
+    templateName = Slider
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                20 {
+                    references.fieldName = assets
+                    references.table = tt_content
+                    as = children
+                }
+            }
+        }
+    }
+}
+
+tt_content.tab-pane < lib.contentElement
+tt_content.tab-pane {
+    templateName = Tab-Pane
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 100
+            as = children_100
+        }
+        101 = B13\Container\DataProcessing\ContainerProcessor
+        101 {
+            colPos = 101
+            as = children_101
+        }
+        102 = B13\Container\DataProcessing\ContainerProcessor
+        102 {
+            colPos = 102
+            as = children_102
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 200
+            as = children_200
+        }
+        201 = B13\Container\DataProcessing\ContainerProcessor
+        201 {
+            colPos = 201
+            as = children_201
+        }
+        202 = B13\Container\DataProcessing\ContainerProcessor
+        202 {
+            colPos = 202
+            as = children_202
+        }
+    }
+}
+
+tt_content.horizontal-gallery < lib.contentElement
+tt_content.horizontal-gallery {
+    templateName = HorizontalGallery
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+                20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                20 {
+                    references.fieldName = assets
+                    references.table = tt_content
+                    as = children
+                }
+            }
+        }
+    }
+}
+
+tt_content.accordion < lib.contentElement
+tt_content.accordion {
+    templateName = Accordion
+    templateRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 100
+            as = children_100
+        }
+    }
+}
+
+tt_content.domjos_modern_banner =< lib.contentElement
+tt_content.domjos_modern_banner {
+    templateName = Banner
+    templateRootPaths {
+        20 = EXT:domjos_modern/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        20 = EXT:domjos_modern/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        20 = EXT:domjos_modern/Resources/Private/Layouts/ContentElements/
+    }
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+        20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        20 {
+            references.fieldName = image
+        }
+        30 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        30 {
+            references.fieldName = assets
+            references.table = tt_content
+            as = children
+        }
+    }
+}
+
+lib.banner = CONTENT
+lib.banner {
+    table = tt_content
+    select {
+        uidInList.field = uid
+        pidInList = 0
+    }
+}

@@ -1,0 +1,31 @@
+services:
+  DomjosModern\EventListener\AfterFileAddedEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'dm_after_file_added'
+        event: TYPO3\CMS\Core\Resource\Event\AfterFileAddedEvent
+  DomjosModern\EventListener\AfterFileReplacedEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'dm_after_file_replaced'
+        event: TYPO3\CMS\Core\Resource\Event\AfterFileReplacedEvent
+  DomjosModern\EventListener\PageLayoutEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'dm_page_layout_event'
+        event: TYPO3\CMS\Backend\View\Event\AfterSectionMarkupGeneratedEvent
+  DomjosModern\Dashboard\:
+    resource: '../Classes/Dashboard/*'
+  dashboard.widget.DocumentationWidget:
+    class: 'DomjosModern\Dashboard\DocumentationWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+    tags:
+      - name: dashboard.widget
+        identifier: 'dm_documentation_widget'
+        groupNames: 'dm'
+        title: 'LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.title'
+        description: 'LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.description'
+        iconIdentifier: 'extension_icon'
+        height: 'large'
+        width: 'large'
