@@ -1,6 +1,6 @@
 mod.web_layout.BackendLayouts {
     layout_1_columns {
-        title = LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:layout.one.name
+        title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.one.name
 
         config {
             backend_layout {
@@ -10,11 +10,11 @@ mod.web_layout.BackendLayouts {
                     1 {
                         columns {
                             1 {
-                                name = LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:layout.header
+                                name = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.header
                                 colPos = 1
                                 maxitems = 1
                                 allowed {
-                                    CType = header, textmedia, textpic, image, domjos_modern_banner
+                                    CType = header, textmedia, textpic, image, template_modern_banner
                                 }
                             }
                         }
@@ -22,7 +22,7 @@ mod.web_layout.BackendLayouts {
                     2 {
                         columns {
                             1 {
-                                name = LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:layout.content
+                                name = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.content
                                 colPos = 0
                             }
                         }

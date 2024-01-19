@@ -24,8 +24,8 @@ services:
       - name: dashboard.widget
         identifier: 'dm_documentation_widget'
         groupNames: 'dm'
-        title: 'LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.title'
-        description: 'LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.description'
+        title: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.title'
+        description: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.description'
         iconIdentifier: 'extension_icon'
         height: 'large'
         width: 'large'

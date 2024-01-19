@@ -11,8 +11,8 @@
  */
 
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Modern Domjos-Typo3-Template',
-    'description' => 'Modern Domjos-Typo3-Template',
+    'title' => 'Modern Typo3-Template',
+    'description' => 'Modern Typo3-Template',
     'category' => 'templates',
     'author' => 'Dominic Joas',
     'author_email' => 'developing@domjos.de',

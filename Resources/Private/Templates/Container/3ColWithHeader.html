@@ -1,11 +1,11 @@
 <f:comment>
 <!--
-  ~ Copyright (c) Domjos 2023
+  ~ Copyright (c) template 2023
   ~
-  ~ This file is part of Domjos-Modern.
-  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~ This file is part of template-Modern.
+  ~ template-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
   ~
-  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~ template-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
   ~
   ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
   -->
@@ -13,10 +13,10 @@
 
 <f:asset.css identifier="{data.uid}">
     #{data.uid} .bg {
-        background-color: {data.domjos_modern_bg_color};
+        background-color: {data.template_modern_bg_color};
     }
     #{data.uid} .bg_trans {
-        background-color: {data.domjos_modern_bg_color}70;
+        background-color: {data.template_modern_bg_color}70;
     }
     #{data.uid} .bg_margin {
         margin: auto;
@@ -26,7 +26,7 @@
     }
 </f:asset.css>
 
-<f:if condition="{data.domjos_modern_bg_color}">
+<f:if condition="{data.template_modern_bg_color}">
     <f:then>
         <f:if condition="{children_200.0.files.0.originalFile.identifier}">
             <f:then>

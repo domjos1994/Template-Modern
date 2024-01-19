@@ -2,9 +2,9 @@
 
 page {
     fluidtemplate {
-        layoutRootPath = EXT:domjos_modern/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:domjos_modern/Resources/Private/Partials/Page/
-        templateRootPath = EXT:domjos_modern/Resources/Private/Templates/Page/
+        layoutRootPath = EXT:template_modern/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:template_modern/Resources/Private/Partials/Page/
+        templateRootPath = EXT:template_modern/Resources/Private/Templates/Page/
     }
 }
 

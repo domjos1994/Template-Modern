@@ -1,5 +1,5 @@
-# cat=DomjosModern/Tinify/Enabled; type=boolean; label=Enable Tinify: Compress Images after upload!
+# cat=TemplateModern/Tinify/Enabled; type=boolean; label=Enable Tinify: Compress Images after upload!
 tinify.enabled =
 
-# cat=DomjosModern/Tinify/Key; type=string; label=Tinify-Key: Enter the API-Key for Tinify!
+# cat=TemplateModern/Tinify/Key; type=string; label=Tinify-Key: Enter the API-Key for Tinify!
 tinify.key =

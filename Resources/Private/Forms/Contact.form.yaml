@@ -11,8 +11,8 @@ finishers:
       subject: '{text-4}'
       recipients:
         '{text-1}': '{text-2} {text-3}'
-      senderAddress: developing@domjos.de
-      senderName: Developing
+      senderAddress:
+      senderName:
       addHtmlPart: true
       attachUploads: true
       title: ''
@@ -21,7 +21,7 @@ finishers:
     options:
       subject: '{text-4}'
       recipients:
-        developing@domjos.de: Developing
+
       senderAddress: '{text-1}'
       senderName: '{text-2}  {text-3}'
       addHtmlPart: true

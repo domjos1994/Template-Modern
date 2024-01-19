@@ -294,6 +294,6 @@ class Helper {
      * @return string|null
      */
     public static function getString(String $fileName, String $key): ?string {
-        return LocalizationUtility::translate("LLL:EXT:domjos_modern/Resources/Private/Language/$fileName:" . $key, "domjos_modern");
+        return LocalizationUtility::translate("LLL:EXT:template_modern/Resources/Private/Language/$fileName:" . $key, "template_modern");
     }
 }

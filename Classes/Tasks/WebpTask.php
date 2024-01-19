@@ -10,7 +10,7 @@
  * You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
  */
 
-namespace DomjosModern\Tasks;
+namespace TemplateModern\Tasks;
 
 use Exception;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -39,7 +39,7 @@ class WebpTask extends AbstractTask
         $files = $this->getAllFiles($rootFolder, $resourceStorage);
 
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
-        $path = ExtensionManagementUtility::extPath('domjos_modern') . "Classes";
+        $path = ExtensionManagementUtility::extPath('template_modern') . "Classes";
         require_once($path . "/Helper.php");
 
         foreach($files as $identifier => $file) {
@@ -84,5 +84,3 @@ class WebpTask extends AbstractTask
         return $result;
     }
 }
-
-

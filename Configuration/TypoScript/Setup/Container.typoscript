@@ -4,10 +4,10 @@ tt_content.1col-with-header-overlay < lib.contentElement
 tt_content.1col-with-header-overlay {
     templateName = 1ColWithHeaderOverlay
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -32,10 +32,10 @@ tt_content.1col-with-header < lib.contentElement
 tt_content.1col-with-header {
     templateName = 1ColWithHeader
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -61,10 +61,10 @@ tt_content.2col-with-header < lib.contentElement
 tt_content.2col-with-header {
     templateName = 2ColWithHeader
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -95,10 +95,10 @@ tt_content.3col-with-header < lib.contentElement
 tt_content.3col-with-header {
     templateName = 3ColWithHeader
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -134,10 +134,10 @@ tt_content.card < lib.contentElement
 tt_content.card {
     templateName = Card
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -168,10 +168,10 @@ tt_content.bg-video < lib.contentElement
 tt_content.bg-video {
     templateName = BGVideo
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -197,10 +197,10 @@ tt_content.slider < lib.contentElement
 tt_content.slider {
     templateName = Slider
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -228,10 +228,10 @@ tt_content.tab-pane < lib.contentElement
 tt_content.tab-pane {
     templateName = Tab-Pane
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -271,10 +271,10 @@ tt_content.horizontal-gallery < lib.contentElement
 tt_content.horizontal-gallery {
     templateName = HorizontalGallery
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -302,10 +302,10 @@ tt_content.accordion < lib.contentElement
 tt_content.accordion {
     templateName = Accordion
     templateRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Templates/Container
+        10 = EXT:template_modern/Resources/Private/Templates/Container
     }
     partialRootPaths {
-        10 = EXT:domjos_modern/Resources/Private/Partials/Container
+        10 = EXT:template_modern/Resources/Private/Partials/Container
     }
     dataProcessing {
         100 = B13\Container\DataProcessing\ContainerProcessor
@@ -316,17 +316,17 @@ tt_content.accordion {
     }
 }
 
-tt_content.domjos_modern_banner =< lib.contentElement
-tt_content.domjos_modern_banner {
+tt_content.template_modern_banner =< lib.contentElement
+tt_content.template_modern_banner {
     templateName = Banner
     templateRootPaths {
-        20 = EXT:domjos_modern/Resources/Private/Templates/ContentElements/
+        20 = EXT:template_modern/Resources/Private/Templates/ContentElements/
     }
     partialRootPaths {
-        20 = EXT:domjos_modern/Resources/Private/Partials/ContentElements/
+        20 = EXT:template_modern/Resources/Private/Partials/ContentElements/
     }
     layoutRootPaths {
-        20 = EXT:domjos_modern/Resources/Private/Layouts/ContentElements/
+        20 = EXT:template_modern/Resources/Private/Layouts/ContentElements/
     }
     dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor

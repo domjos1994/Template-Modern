@@ -15,11 +15,11 @@ use B13\Container\Tca\Registry;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-$lang = 'LLL:EXT:domjos_modern/Resources/Private/Language/container.xlf';
-$icons = 'EXT:domjos_modern/Resources/Public/Icons';
+$lang = 'LLL:EXT:template_modern/Resources/Private/Language/container.xlf';
+$icons = 'EXT:template_modern/Resources/Public/Icons';
 
 // add preview-Renderer
-$GLOBALS['TCA']["tt_content"]['ctrl']["textpic"]['previewRenderer'] = DomjosModern\PreviewRenderer\PreviewRenderer::class;
+$GLOBALS['TCA']["tt_content"]['ctrl']["textpic"]['previewRenderer'] = TemplateModern\PreviewRenderer\PreviewRenderer::class;
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
     (
@@ -205,7 +205,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
 );
 
 ExtensionManagementUtility::addTCAcolumns('tt_content', [
-    'domjos_modern_bg_color' => [
+    'template_modern_bg_color' => [
         'exclude' => 0,
         'label' => $lang . ':cce.bg',
         'config' => [
@@ -213,7 +213,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
             'renderType' => 'colorpicker',
         ],
     ],
-    'domjos_modern_gallery_height' => [
+    'template_modern_gallery_height' => [
         'exclude' => 0,
         'label' => $lang . ':cce.horizontal-gallery.height',
         'config' => [
@@ -226,7 +226,7 @@ ExtensionManagementUtility::addTCAcolumns('tt_content', [
 $GLOBALS['TCA']['tt_content']['types']['tab-pane']['showitem'] = '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
         --palette--;;general,
-        --palette--;;headers,domjos_modern_bg_color,
+        --palette--;;headers,template_modern_bg_color,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
         --palette--;;frames,
         --palette--;;appearanceLinks,
@@ -248,7 +248,7 @@ $GLOBALS['TCA']['tt_content']['types']['slider']['showitem'] = $GLOBALS['TCA']['
 $GLOBALS['TCA']['tt_content']['types']['horizontal-gallery']['showitem'] = '
     --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
         --palette--;;general,
-        --palette--;;headers,domjos_modern_gallery_height,
+        --palette--;;headers,template_modern_gallery_height,
     --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
         --palette--;;frames,
         --palette--;;appearanceLinks,
@@ -268,15 +268,15 @@ ExtensionManagementUtility::addTcaSelectItem(
     'tt_content',
     'CType',
     [
-        'LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.title',
-        'domjos_modern_banner',
+        'LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.title',
+        'template_modern_banner',
         "$icons/banner.png"
     ],
     'textmedia',
     'after'
 );
 
-$GLOBALS['TCA']['tt_content']['types']['domjos_modern_banner'] = [
+$GLOBALS['TCA']['tt_content']['types']['template_modern_banner'] = [
     'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                --palette--;;general,
@@ -297,6 +297,6 @@ $GLOBALS['TCA']['tt_content']['types']['domjos_modern_banner'] = [
 
 ExtensionManagementUtility::addPiFlexFormValue(
     '*',
-    'FILE:EXT:domjos_modern/Configuration/FlexForms/ContentElements/banner.xml',
-    'domjos_modern_banner'
+    'FILE:EXT:template_modern/Configuration/FlexForms/ContentElements/banner.xml',
+    'template_modern_banner'
 );

@@ -10,7 +10,7 @@
  * You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
  */
 
-namespace DomjosModern\Dashboard;
+namespace TemplateModern\Dashboard;
 
 use Parsedown;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -33,10 +33,10 @@ class DocumentationWidget implements WidgetInterface {
 
     public function renderWidgetContent(): string
     {
-        $path = ExtensionManagementUtility::extPath('domjos_modern') . "Classes";
+        $path = ExtensionManagementUtility::extPath('template_modern') . "Classes";
         include_once("$path/lib/Parsedown.php");
 
-        $abs = GeneralUtility::getFileAbsFileName("EXT:domjos_modern/Documentation");
+        $abs = GeneralUtility::getFileAbsFileName("EXT:template_modern/Documentation");
         $arr = [];
         $dirs = $this->getDirContents($abs, $arr);
 
@@ -71,7 +71,7 @@ class DocumentationWidget implements WidgetInterface {
         }
         $data .= "</ul>";
 
-        $this->view->setTemplateRootPaths(["EXT:domjos_modern/Resources/Private/Templates"]);
+        $this->view->setTemplateRootPaths(["EXT:template_modern/Resources/Private/Templates"]);
         $this->view->assignMultiple([
             'configuration' => $this->configuration,
             'options' => $this->options,

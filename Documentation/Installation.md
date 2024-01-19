@@ -3,8 +3,8 @@
 ## 1. Copy Template and enable it
 Copy the Source of the template in the ext folder of the Typo3-Installation.<br/>
 ``typo3conf/ext``<br/>
-You should name the folder into ``domjos_modern``.
-Go to the Extensions-Part of Typo3 and enable the Extension `` Modern Domjos-Typo3-Template``.
+You should name the folder into ``template_modern``.
+Go to the Extensions-Part of Typo3 and enable the Extension `` Modern Typo3-Template``.
 
 ## 2. Root Page
 Create a first page in the Typo3-Page-Tree and open the Page-Settings.

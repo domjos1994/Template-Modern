@@ -10,7 +10,7 @@
  * You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
  */
 
-namespace DomjosModern\Tasks;
+namespace TemplateModern\Tasks;
 
 use DominicJoas\Helper;
 use Psr\Log\LoggerInterface;
@@ -33,7 +33,7 @@ class TinifyTask extends AbstractTask {
     public function execute(): bool
     {
         $connectionPool = GeneralUtility::makeInstance(ConnectionPool::class);
-        $path = ExtensionManagementUtility::extPath('domjos_modern') . "Classes";
+        $path = ExtensionManagementUtility::extPath('template_modern') . "Classes";
         require_once($path . "/Helper.php");
 
         $resourceFactory = GeneralUtility::makeInstance(ResourceFactory::class);
@@ -48,7 +48,7 @@ class TinifyTask extends AbstractTask {
              $counter++;
         }
 
-        $item = LocalizationUtility::translate("tinify.task.schedule",  "domjos_modern");
+        $item = LocalizationUtility::translate("tinify.task.schedule",  "template_modern");
         $this->logger->info("$item " . $counter);
 
         return true;

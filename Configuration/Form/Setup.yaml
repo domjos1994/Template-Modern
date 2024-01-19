@@ -3,7 +3,7 @@ TYPO3:
     Form:
       persistenceManager:
         allowedExtensionPaths:
-          110: EXT:domjos_modern/Resources/Private/Forms/
+          110: EXT:template_modern/Resources/Private/Forms/
       prototypes:
         standard:
           formElementsDefinition:
@@ -12,13 +12,13 @@ TYPO3:
                 templateVariant: version2
                 translation:
                   translationFiles:
-                    110: 'EXT:domjos_modern/Resources/Private/Language/form.xlf'
+                    110: 'EXT:template_modern/Resources/Private/Language/form.xlf'
                 layoutRootPaths:
-                  20: 'EXT:domjos_modern/Resources/Private/Layouts/Form/'
+                  20: 'EXT:template_modern/Resources/Private/Layouts/Form/'
                 templateRootPaths:
-                  20: 'EXT:domjos_modern/Resources/Private/Templates/Form/'
+                  20: 'EXT:template_modern/Resources/Private/Templates/Form/'
                 partialRootPaths:
-                  20: 'EXT:domjos_modern/Resources/Private/Partials/Form/'
+                  20: 'EXT:template_modern/Resources/Private/Partials/Form/'
             ImageUpload:
               properties:
                 imageLinkMaxWidth: 1200

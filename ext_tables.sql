@@ -10,6 +10,6 @@
  */
 
 CREATE TABLE tt_content (
-    domjos_modern_bg_color varchar(22) DEFAULT '' NOT NULL,
-    domjos_modern_gallery_height varchar(22) DEFAULT '' NOT NULL,
+    template_modern_bg_color varchar(22) DEFAULT '' NOT NULL,
+    template_modern_gallery_height varchar(22) DEFAULT '' NOT NULL,
 );

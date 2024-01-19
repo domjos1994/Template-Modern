@@ -1,11 +1,11 @@
 <f:comment>
 <!--
-  ~ Copyright (c) Domjos 2023
+  ~ Copyright (c) template 2023
   ~
-  ~ This file is part of Domjos-Modern.
-  ~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~ This file is part of template-Modern.
+  ~ template-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
   ~
-  ~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~ template-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
   ~
   ~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
   -->
@@ -19,7 +19,7 @@
         <f:case value="5"><h5>{data.header}</h5></f:case>
         <f:defaultCase><h2>{data.header}</h2></f:defaultCase>
     </f:switch>
-    <f:image class="folder" src="EXT:domjos_modern/Resources/Public/Icons/folder.svg" width="256" height="256" alt="Folder"/>
+    <f:image class="folder" src="EXT:template_modern/Resources/Public/Icons/folder.svg" width="256" height="256" alt="Folder"/>
     <div class="preview">
         <f:for each="{item.files}" as="image" iteration="iter">
             <f:if condition="{iter.index}<9">

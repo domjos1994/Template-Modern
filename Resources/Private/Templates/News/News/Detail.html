@@ -118,7 +118,7 @@
 	<f:if condition="{settings.backPid}">
 		<!-- Link Back -->
 		<f:link.page class="btn btn-secondary mb-3" pageUid="{settings.backPid}">
-			<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:back.link" />
+			<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:back.link" />
 		</f:link.page>
 	</f:if>
 
@@ -148,12 +148,12 @@
 				<f:if condition="{newsItem.allRelatedSorted}">
 					<f:then>
 						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#relational_news_content" aria-expanded="false" aria-controls="relational_news_content">
-							<i class="fas fa-newspaper"></i>&nbsp;<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.related.news" /> {newsItem.allRelatedSorted -> f:count()}
+							<i class="fas fa-newspaper"></i>&nbsp;<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:news.related.news" /> {newsItem.allRelatedSorted -> f:count()}
 						</button>
 					</f:then>
 					<f:else>
 						<button class="accordion-button collapsed" type="button" disabled data-bs-toggle="collapse" data-bs-target="#relational_news_content" aria-expanded="false" aria-controls="relational_news_content">
-							<i class="fas fa-newspaper"></i>&nbsp;<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.related.news" /> {newsItem.allRelatedSorted -> f:count()}
+							<i class="fas fa-newspaper"></i>&nbsp;<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:news.related.news" /> {newsItem.allRelatedSorted -> f:count()}
 						</button>
 					</f:else>
 				</f:if>
@@ -164,7 +164,7 @@
 						<li class="list-group-item">
 							<i class="fas fa-newspaper"></i>
 							<span class="news-related-news-date me-2">
-								<f:format.date format="{f:translate(key:'LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:date.format')}">{related.datetime}</f:format.date>
+								<f:format.date format="{f:translate(key:'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:date.format')}">{related.datetime}</f:format.date>
 							</span>
 							<n:link newsItem="{related}" settings="{settings}" title="{related.title}">
 								{related.title}
@@ -179,12 +179,12 @@
 				<f:if condition="{newsItem.relatedFiles}">
 					<f:then>
 						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#relational_files_content" aria-expanded="false" aria-controls="relational_files_content">
-							<i class="fas fa-file"></i>&nbsp;<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.related.files" /> {newsItem.relatedFiles -> f:count()}
+							<i class="fas fa-file"></i>&nbsp;<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:news.related.files" /> {newsItem.relatedFiles -> f:count()}
 						</button>
 					</f:then>
 					<f:else>
 						<button class="accordion-button collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#relational_files_content" aria-expanded="false" aria-controls="relational_files_content">
-							<i class="fas fa-file"></i>&nbsp;<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.related.files" /> {newsItem.relatedFiles -> f:count()}
+							<i class="fas fa-file"></i>&nbsp;<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:news.related.files" /> {newsItem.relatedFiles -> f:count()}
 						</button>
 					</f:else>
 				</f:if>
@@ -210,12 +210,12 @@
 				<f:if condition="{newsItem.relatedLinks}">
 					<f:then>
 						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#relational_links_content" aria-expanded="false" aria-controls="relational_links_content">
-							<i class="fas fa-link"></i>&nbsp;<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.related.links" /> {newsItem.relatedLinks -> f:count()}
+							<i class="fas fa-link"></i>&nbsp;<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:news.related.links" /> {newsItem.relatedLinks -> f:count()}
 						</button>
 					</f:then>
 					<f:else>
 						<button class="accordion-button collapsed" type="button" disabled data-bs-toggle="collapse" data-bs-target="#relational_links_content" aria-expanded="false" aria-controls="relational_links_content">
-							<i class="fas fa-link"></i>&nbsp;<f:translate key="LLL:EXT:domjos_modern/Resources/Private/Language/locallang.xlf:news.related.links" /> {newsItem.relatedLinks -> f:count()}
+							<i class="fas fa-link"></i>&nbsp;<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:news.related.links" /> {newsItem.relatedLinks -> f:count()}
 						</button>
 					</f:else>
 				</f:if>

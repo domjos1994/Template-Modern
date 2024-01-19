@@ -12,7 +12,6 @@
 
 return [
     'dm' => [
-        'title' => 'Domjos-Modern',
+        'title' => 'Template-Modern',
     ],
 ];
-

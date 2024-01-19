@@ -16,17 +16,16 @@ return [
     'newspaper' => [
         'provider' => BitmapIconProvider::class,
         // The source bitmap file
-        'source' => 'EXT:domjos_modern/Resources/Public/Icons/newspaper.png',
+        'source' => 'EXT:template_modern/Resources/Public/Icons/newspaper.png',
     ],
     'banner_icon' => [
         'provider' => BitmapIconProvider::class,
         // The source bitmap file
-        'source' => 'EXT:domjos_modern/Resources/Public/Icons/banner.png',
+        'source' => 'EXT:template_modern/Resources/Public/Icons/banner.png',
     ],
     'extension_icon' => [
         'provider' => BitmapIconProvider::class,
         // The source bitmap file
-        'source' => 'EXT:domjos_modern/Resources/Public/Icons/Extension.png',
+        'source' => 'EXT:template_modern/Resources/Public/Icons/Extension.png',
     ],
 ];
-

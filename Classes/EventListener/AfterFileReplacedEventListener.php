@@ -10,7 +10,7 @@
  * You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
  */
 
-namespace DomjosModern\EventListener;
+namespace TemplateModern\EventListener;
 
 use DominicJoas\Helper;
 use TYPO3\CMS\Core\Resource\Event\AfterFileReplacedEvent;
@@ -19,7 +19,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 class AfterFileReplacedEventListener {
 
     public function __invoke(AfterFileReplacedEvent $event): void {
-        $path = ExtensionManagementUtility::extPath('domjos_modern') . "Classes";
+        $path = ExtensionManagementUtility::extPath('template_modern') . "Classes";
         require_once($path . "/Helper.php");
         Helper::compressIfEnabled($event);
     }

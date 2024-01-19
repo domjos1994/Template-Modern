@@ -18,7 +18,7 @@ call_user_func(function () {
     /**
      * Extension key
      */
-    $extensionKey = 'domjos_modern';
+    $extensionKey = 'template_modern';
 
     /**
      * Add default TypoScript (constants and setup)
@@ -26,6 +26,6 @@ call_user_func(function () {
     ExtensionManagementUtility::addStaticFile(
         $extensionKey,
         'Configuration/TypoScript',
-        'Domjos Modern'
+        'Template Modern'
     );
 });

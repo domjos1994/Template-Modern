@@ -17,13 +17,13 @@
         <main>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.title</sheetTitle>
+                    <sheetTitle>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.title</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
                     <title>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title</label>
                             <config>
                                 <type>input</type>
                                 <eval>trim</eval>
@@ -32,7 +32,7 @@
                     </title>
                     <subtitle>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content</label>
                             <config>
                                 <type>text</type>
                                 <enableRichtext>1</enableRichtext>
@@ -41,7 +41,7 @@
                     </subtitle>
                     <image>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.image</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.image</label>
                             <config>
                                 <type>inline</type>
                                 <maxitems>1</maxitems>
@@ -114,7 +114,7 @@
                     </image>
                     <banner_link>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.link</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.link</label>
                             <config>
                                 <type>input</type>
                                 <renderType>inputLink</renderType>
@@ -123,7 +123,7 @@
                     </banner_link>
                     <background_color>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.background_color</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.background_color</label>
                             <config>
                                 <type>input</type>
                                 <renderType>colorpicker</renderType>
@@ -148,7 +148,7 @@
                     </background_color>
                     <color>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.color</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.color</label>
                             <config>
                                 <type>input</type>
                                 <renderType>colorpicker</renderType>
@@ -173,7 +173,7 @@
                     </color>
                     <title_size>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title.size</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title.size</label>
                             <config>
                                 <type>number</type>
                                 <eval>double2</eval>
@@ -187,7 +187,7 @@
                     </title_size>
                     <content_size>
                         <TCEforms>
-                            <label>LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content.size</label>
+                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content.size</label>
                             <config>
                                 <type>number</type>
                                 <eval>double2</eval>
@@ -206,11 +206,11 @@
                                 <type>check</type>
                                 <items type="array">
                                     <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.showMoreLink</numIndex>
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.showMoreLink</numIndex>
                                         <numIndex index="1"/>
                                     </numIndex>
                                     <numIndex index="1" type="array">
-                                        <numIndex index="0">LLL:EXT:domjos_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.hover_effect</numIndex>
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.hover_effect</numIndex>
                                         <numIndex index="1"/>
                                     </numIndex>
                                 </items>

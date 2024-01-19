@@ -10,7 +10,7 @@
  * You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
  */
 
-namespace DomjosModern\PreviewRenderer;
+namespace TemplateModern\PreviewRenderer;
 
 use TYPO3\CMS\Backend\Preview\PreviewRendererInterface;
 use TYPO3\CMS\Backend\View\BackendLayout\Grid\GridColumnItem;
