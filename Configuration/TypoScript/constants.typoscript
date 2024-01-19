@@ -16,78 +16,78 @@ page {
 # customsubcategory=dev=Developer-Options
 
 dev {
-    # cat=Domjos-Modern/dev/a; type=boolean; label=Debug Mode: Enable Debug-Mode
+    # cat=Template-Modern/dev/a; type=boolean; label=Debug Mode: Enable Debug-Mode
     debug =
 }
 
 site {
-    # cat=Domjos-Modern/site/a; type=string; label=URL: Base-URL!
+    # cat=Template-Modern/site/a; type=string; label=URL: Base-URL!
     url =
-    # cat=Domjos-Modern/site/b; type=string; label=Favicon: Path to favicon!
+    # cat=Template-Modern/site/b; type=string; label=Favicon: Path to favicon!
     favicon =
-    # cat=Domjos-Modern/site/c; type=string; label=Title: Title in the Menu-Bar and h1.
+    # cat=Template-Modern/site/c; type=string; label=Title: Title in the Menu-Bar and h1.
     title =
-    # cat=Domjos-Modern/site/d; type=string; label=Icon: Path to icon!
+    # cat=Template-Modern/site/d; type=string; label=Icon: Path to icon!
     icon =
-    # cat=Domjos-Modern/site/e; type=boolean; label=Title: Show title next to Icon!
+    # cat=Template-Modern/site/e; type=boolean; label=Title: Show title next to Icon!
     showTitle =
-    # cat=Domjos-Modern/site/f; type=int+; label=Search: Page to the Search-Site
+    # cat=Template-Modern/site/f; type=int+; label=Search: Page to the Search-Site
     search =
 }
 
 menu {
-    # cat=Domjos-Modern/navigation/a; type=int+; label=Footer: ID of footer menu
+    # cat=Template-Modern/navigation/a; type=int+; label=Footer: ID of footer menu
     footer =
-    # cat=Domjos-Modern/footer/a; type=boolean; label=Footer fixed Bottom: Show the footer fixed to the bottom of the site
+    # cat=Template-Modern/footer/a; type=boolean; label=Footer fixed Bottom: Show the footer fixed to the bottom of the site
     footerFixedBottom =
 
-    # cat=Domjos-Modern/footer/b; type=string; label=E-Mail: Footer E-Mail-Address
+    # cat=Template-Modern/footer/b; type=string; label=E-Mail: Footer E-Mail-Address
     footer.email =
-    # cat=Domjos-Modern/footer/c; type=string; label=Phone: Footer Phone-Number
+    # cat=Template-Modern/footer/c; type=string; label=Phone: Footer Phone-Number
     footer.phone =
-    # cat=Domjos-Modern/footer/d; type=string; label=Donate: Account-Data for donation
+    # cat=Template-Modern/footer/d; type=string; label=Donate: Account-Data for donation
     footer.donate =
 
-    # cat=Domjos-Modern/footer/e; type=string; label=OSM-Link: Link to the embedded-map
+    # cat=Template-Modern/footer/e; type=string; label=OSM-Link: Link to the embedded-map
     footer.maps.embed_link =
 
-    # cat=Domjos-Modern/footer/f; type=string; label=OSM-BIG: Link to the big map
+    # cat=Template-Modern/footer/f; type=string; label=OSM-BIG: Link to the big map
     footer.maps.big_map =
 
-    # cat=Domjos-Modern/navigation/b; type=boolean; label=Breadcrumb: Enable Breadcrumb
+    # cat=Template-Modern/navigation/b; type=boolean; label=Breadcrumb: Enable Breadcrumb
     breadcrumb =
 
-    # cat=Domjos-Modern/navigation/c; type=boolean; label=Language-Menu: Show Menu
+    # cat=Template-Modern/navigation/c; type=boolean; label=Language-Menu: Show Menu
     lang =
 }
 
 social {
-    # cat=Domjos-Modern/footer/g; type=string; label=Facebook: Link to Facebook-Page
+    # cat=Template-Modern/footer/g; type=string; label=Facebook: Link to Facebook-Page
     facebook =
-    # cat=Domjos-Modern/footer/h; type=string; label=Youtube: Link to Youtube-Channel
+    # cat=Template-Modern/footer/h; type=string; label=Youtube: Link to Youtube-Channel
     youtube =
-    # cat=Domjos-Modern/footer/i; type=string; label=Instagram: Link to Instagram-Page
+    # cat=Template-Modern/footer/i; type=string; label=Instagram: Link to Instagram-Page
     instagram =
 }
 
 colors {
-    # cat=Domjos-Modern/colors/a; type=color; label=Light-Color: The light-color for the Template
+    # cat=Template-Modern/colors/a; type=color; label=Light-Color: The light-color for the Template
     lightColor =
-    # cat=Domjos-Modern/colors/b; type=color; label=Dark-Color: The dark-color for the Template
+    # cat=Template-Modern/colors/b; type=color; label=Dark-Color: The dark-color for the Template
     darkColor =
-    # cat=Domjos-Modern/colors/c; type=color; label=Text-Color: The text-color for the Template
+    # cat=Template-Modern/colors/c; type=color; label=Text-Color: The text-color for the Template
     textColor =
-    # cat=Domjos-Modern/colors/d; type=color; label=Breadcrumb-Color: The breadcrumb-color for the Template
+    # cat=Template-Modern/colors/d; type=color; label=Breadcrumb-Color: The breadcrumb-color for the Template
     breadcrumbColor =
-    # cat=Domjos-Modern/colors/e; type=color; label=Breadcrumb-Text-Color: The breadcrumb-Text-Color for the Template
+    # cat=Template-Modern/colors/e; type=color; label=Breadcrumb-Text-Color: The breadcrumb-Text-Color for the Template
     breadcrumbTextColor =
 }
 
 tools {
-    # cat=Domjos-Modern/tools/a; type=string; label=Analytics: Insert Google Analytics Code
+    # cat=Template-Modern/tools/a; type=string; label=Analytics: Insert Google Analytics Code
     analytics =
-    # cat=Domjos-Modern/tools/b; type=string; label=Seobility: Insert Seobility-verification
+    # cat=Template-Modern/tools/b; type=string; label=Seobility: Insert Seobility-verification
     seobility =
-    # cat=Domjos-Modern/site/g; type=string; label=Privacy: Url to privacy for the Cookie-Consent
+    # cat=Template-Modern/site/g; type=string; label=Privacy: Url to privacy for the Cookie-Consent
     privacy =
 }

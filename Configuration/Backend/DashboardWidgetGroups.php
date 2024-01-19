@@ -11,7 +11,7 @@
  */
 
 return [
-    'dm' => [
+    'tm' => [
         'title' => 'Template-Modern',
     ],
 ];

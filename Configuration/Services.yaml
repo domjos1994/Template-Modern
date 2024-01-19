@@ -1,29 +1,29 @@
 services:
-  DomjosModern\EventListener\AfterFileAddedEventListener:
+  TemplateModern\EventListener\AfterFileAddedEventListener:
     tags:
       - name: event.listener
-        identifier: 'dm_after_file_added'
+        identifier: 'tm_after_file_added'
         event: TYPO3\CMS\Core\Resource\Event\AfterFileAddedEvent
-  DomjosModern\EventListener\AfterFileReplacedEventListener:
+  TemplateModern\EventListener\AfterFileReplacedEventListener:
     tags:
       - name: event.listener
-        identifier: 'dm_after_file_replaced'
+        identifier: 'tm_after_file_replaced'
         event: TYPO3\CMS\Core\Resource\Event\AfterFileReplacedEvent
-  DomjosModern\EventListener\PageLayoutEventListener:
+  TemplateModern\EventListener\PageLayoutEventListener:
     tags:
       - name: event.listener
-        identifier: 'dm_page_layout_event'
+        identifier: 'tm_page_layout_event'
         event: TYPO3\CMS\Backend\View\Event\AfterSectionMarkupGeneratedEvent
-  DomjosModern\Dashboard\:
+  TemplateModern\Dashboard\:
     resource: '../Classes/Dashboard/*'
   dashboard.widget.DocumentationWidget:
-    class: 'DomjosModern\Dashboard\DocumentationWidget'
+    class: 'TemplateModern\Dashboard\DocumentationWidget'
     arguments:
       $view: '@dashboard.views.widget'
     tags:
       - name: dashboard.widget
-        identifier: 'dm_documentation_widget'
-        groupNames: 'dm'
+        identifier: 'tm_documentation_widget'
+        groupNames: 'tm'
         title: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.title'
         description: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.description'
         iconIdentifier: 'extension_icon'

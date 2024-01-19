@@ -75,10 +75,12 @@
                 </f:for>
             </ul>
             <f:render partial="Navigation/LangNavigation" arguments="{_all}"/>
-            <f:if condition="{search_uid} != '{$plugin.tx_indexedsearch.settings.targetPid}'">
-                <f:if condition="{data.uid} != {search_uid}">
-                    <f:cObject typoscriptObjectPath="lib.searchBox" />
-                </f:if>
+            <f:if condition="{search_uid} != ''">
+              <f:if condition="{search_uid} != '{$plugin.tx_indexedsearch.settings.targetPid}'">
+                  <f:if condition="{data.uid} != {search_uid}">
+                      <f:cObject typoscriptObjectPath="lib.searchBox" />
+                  </f:if>
+              </f:if>
             </f:if>
         </div>
     </div>
