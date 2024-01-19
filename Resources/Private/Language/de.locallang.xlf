@@ -112,6 +112,10 @@
                 <source>Centered</source>
                 <target>Zentriert</target>
             </trans-unit>
+            <trans-unit id="page.layout.30">
+                <source>Bento</source>
+                <target>Bento</target>
+            </trans-unit>
 
             <trans-unit id="page.filelinks.layout.1">
                 <source>List with additional Informations!</source>

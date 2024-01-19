@@ -10,6 +10,7 @@ TCEFORM {
             addItems {
                 10 = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:page.layout.10
                 20 = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:page.layout.20
+                30 = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:page.layout.30
             }
         }
     }
