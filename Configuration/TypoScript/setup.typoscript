@@ -240,11 +240,23 @@ page {
                 pagets__layout_1_columns = TEXT
                 pagets__layout_1_columns.value = OneColumns.html
                 pagets__layout_2_columns = TEXT
-                pagets__layout_2_columns.value = TwoColumns.html
+                pagets__layout_2_columns.value = OneColumnNoHeader.html
                 pagets__layout_3_columns = TEXT
-                pagets__layout_3_columns.value = ThreeColumns.html
+                pagets__layout_3_columns.value = TwoColumns.html
                 pagets__layout_4_columns = TEXT
-                pagets__layout_4_columns.value = OneColumnNoHeader.html
+                pagets__layout_4_columns.value = TwoColumnsNoHeader.html
+                pagets__layout_5_columns = TEXT
+                pagets__layout_5_columns.value = TwoColumnsMain.html
+                pagets__layout_6_columns = TEXT
+                pagets__layout_6_columns.value = TwoColumnsMainNoHeader.html
+                pagets__layout_7_columns = TEXT
+                pagets__layout_7_columns.value = ThreeColumns.html
+                pagets__layout_8_columns = TEXT
+                pagets__layout_8_columns.value = ThreeColumnsNoHeader.html
+                pagets__layout_9_columns = TEXT
+                pagets__layout_9_columns.value = ThreeColumnsMain.html
+                pagets__layout_10_columns = TEXT
+                pagets__layout_10_columns.value = ThreeColumnsMainNoHeader.html
             }
         }
 

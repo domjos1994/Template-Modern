@@ -1,5 +1,5 @@
 mod.web_layout.BackendLayouts {
-    layout_3_columns {
+    layout_7_columns {
         title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.three.name
         icon = EXT:template_modern/Resources/Public/Icons/backend_3col_header.png
 

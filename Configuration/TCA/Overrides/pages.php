@@ -59,6 +59,16 @@ call_user_func(function() {
     );
     ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
+        'Configuration/TsConfig/PageTSConfig/BackendLayouts/TwoColumnsMain.tsconfig',
+        '2 Column with Main-Area'
+    );
+    ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
+        'Configuration/TsConfig/PageTSConfig/BackendLayouts/TwoColumnsMainNoHeader.tsconfig',
+        '2 Columns with Main-Area without Header'
+    );
+    ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
         'Configuration/TsConfig/PageTSConfig/BackendLayouts/ThreeColumns.tsconfig',
         '3 Column'
     );
@@ -66,5 +76,15 @@ call_user_func(function() {
         $extensionKey,
         'Configuration/TsConfig/PageTSConfig/BackendLayouts/ThreeColumnsNoHeader.tsconfig',
         '3 Columns without Header'
+    );
+    ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
+        'Configuration/TsConfig/PageTSConfig/BackendLayouts/ThreeColumnsMain.tsconfig',
+        '3 Columns with Main-Area'
+    );
+    ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
+        'Configuration/TsConfig/PageTSConfig/BackendLayouts/ThreeColumnsMainNoHeader.tsconfig',
+        '3 Columns with Main-Area without Header'
     );
 });

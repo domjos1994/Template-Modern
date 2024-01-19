@@ -1,7 +1,7 @@
 mod.web_layout.BackendLayouts {
-    layout_8_columns {
-        title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.three.noHeader.name
-        icon = EXT:template_modern/Resources/Public/Icons/backend_3col.png
+    layout_10_columns {
+        title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.three.main.noHeader.name
+        icon = EXT:template_modern/Resources/Public/Icons/backend_3col_main.png
 
         config {
             backend_layout {

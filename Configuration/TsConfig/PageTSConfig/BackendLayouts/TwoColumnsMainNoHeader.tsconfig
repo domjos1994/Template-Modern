@@ -1,24 +1,20 @@
 mod.web_layout.BackendLayouts {
-    layout_8_columns {
-        title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.three.noHeader.name
-        icon = EXT:template_modern/Resources/Public/Icons/backend_3col.png
+    layout_6_columns {
+        title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.two.main.noHeader.name
+        icon = EXT:template_modern/Resources/Public/Icons/backend_2col_main.png
 
         config {
             backend_layout {
-                colCount = 3
+                colCount = 2
                 rowCount = 2
                 rows {
                     1 {
                         columns {
                             1 {
-                                name = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.left
-                                colPos = 3
-                            }
-                            2 {
                                 name = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.content
                                 colPos = 0
                             }
-                            3 {
+                            2 {
                                 name = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.right
                                 colPos = 2
                             }

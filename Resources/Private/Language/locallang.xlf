@@ -23,11 +23,23 @@
             <trans-unit id="layout.two.name">
                 <source>2 Columns</source>
             </trans-unit>
+            <trans-unit id="layout.two.main.name">
+                <source>2 Columns with Main-Area</source>
+            </trans-unit>
+            <trans-unit id="layout.two.main.noHeader.name">
+                <source>2 Columns with Main-Area and no Head-Area</source>
+            </trans-unit>
             <trans-unit id="layout.two.noHeader.name">
                 <source>2 Columns and no Head-Area</source>
             </trans-unit>
             <trans-unit id="layout.three.name">
                 <source>3 Columns</source>
+            </trans-unit>
+            <trans-unit id="layout.three.main.name">
+                <source>3 Columns with Main-Area</source>
+            </trans-unit>
+            <trans-unit id="layout.three.main.noHeader.name">
+                <source>3 Columns with Main-Area and no Head-Area</source>
             </trans-unit>
             <trans-unit id="layout.three.noHeader.name">
                 <source>2 Columns and no Head-Area</source>
