@@ -31,10 +31,18 @@
             </f:else>
         </f:if>
         <!--TYPO3SEARCH_begin-->
-        <f:render partial="Jumbotron" arguments="{headerContent: headerContent}"/>
         <div class="{container}">
             <div class="row mainRow">
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <f:for each="{sidebarContent2}" as="contentElement">
+                        <f:cObject
+                                typoscriptObjectPath="tt_content.{contentElement.data.CType}"
+                                data="{contentElement.data}"
+                                table="tt_content"
+                        />
+                    </f:for>
+                </div>
+                <div class="col-md-4">
                     <f:for each="{mainContent}" as="contentElement">
                         <f:cObject
                                 typoscriptObjectPath="tt_content.{contentElement.data.CType}"
@@ -43,7 +51,7 @@
                         />
                     </f:for>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <f:for each="{sidebarContent}" as="sidebarElement">
                         <f:cObject
                                 typoscriptObjectPath="tt_content.{sidebarElement.data.CType}"

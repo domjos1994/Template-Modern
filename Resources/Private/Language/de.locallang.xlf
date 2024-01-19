@@ -22,9 +22,17 @@
                 <source>1 Column</source>
                 <target>1 Spalte</target>
             </trans-unit>
+            <trans-unit id="layout.two.noHeader.name">
+                <source>2 Columns and no Head-Area</source>
+                <target>2 Spalten und kein Kopfbereich</target>
+            </trans-unit>
             <trans-unit id="layout.two.name">
                 <source>2 Columns</source>
                 <target>2 Spalten</target>
+            </trans-unit>
+            <trans-unit id="layout.three.noHeader.name">
+                <source>3 Columns and no Head-Area</source>
+                <target>3 Spalten und kein Kopfbereich</target>
             </trans-unit>
             <trans-unit id="layout.three.name">
                 <source>3 Columns</source>

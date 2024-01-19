@@ -1,7 +1,7 @@
 mod.web_layout.BackendLayouts {
-    layout_3_columns {
-        title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.three.name
-        icon = EXT:template_modern/Resources/Public/Icons/backend_3col_header.png
+    layout_6_columns {
+        title = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.three.noHeader.name
+        icon = EXT:template_modern/Resources/Public/Icons/backend_3col.png
 
         config {
             backend_layout {
@@ -9,19 +9,6 @@ mod.web_layout.BackendLayouts {
                 rowCount = 2
                 rows {
                     1 {
-                        columns {
-                            1 {
-                                name = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.header
-                                colPos = 1
-                                colspan = 3
-                                maxitems = 1
-                                allowed {
-                                    CType = header, textmedia, textpic, image, template_modern_banner
-                                }
-                            }
-                        }
-                    }
-                    2 {
                         columns {
                             1 {
                                 name = LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:layout.left

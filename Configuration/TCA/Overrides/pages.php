@@ -54,7 +54,17 @@ call_user_func(function() {
     );
     ExtensionManagementUtility::registerPageTSConfigFile(
         $extensionKey,
+        'Configuration/TsConfig/PageTSConfig/BackendLayouts/TwoColumnsNoHeader.tsconfig',
+        '2 Columns without Header'
+    );
+    ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
         'Configuration/TsConfig/PageTSConfig/BackendLayouts/ThreeColumns.tsconfig',
         '3 Column'
+    );
+    ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
+        'Configuration/TsConfig/PageTSConfig/BackendLayouts/ThreeColumnsNoHeader.tsconfig',
+        '3 Columns without Header'
     );
 });
