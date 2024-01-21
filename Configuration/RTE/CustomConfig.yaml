@@ -10,6 +10,11 @@ imports:
 
 # Add configuration for the editor
 # For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+buttons:
+  link:
+    properties:
+      class:
+        allowedClasses: 'btn btn-primary, btn btn-secondary, btn btn-outline-primary, btn btn-outline-secondary'
 editor:
   config:
     style:

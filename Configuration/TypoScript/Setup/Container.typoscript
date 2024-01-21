@@ -164,6 +164,35 @@ tt_content.card {
     }
 }
 
+tt_content.bento_item < lib.contentElement
+tt_content.bento_item {
+    templateName = BentoItem
+    templateRootPaths {
+        10 = EXT:template_modern/Resources/Private/Templates/Container
+    }
+    partialRootPaths {
+        10 = EXT:template_modern/Resources/Private/Partials/Container
+    }
+    dataProcessing {
+        100 = B13\Container\DataProcessing\ContainerProcessor
+        100 {
+            colPos = 200
+            as = children_200
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = image
+                }
+            }
+        }
+        200 = B13\Container\DataProcessing\ContainerProcessor
+        200 {
+            colPos = 201
+            as = children_201
+        }
+    }
+}
+
 tt_content.bg-video < lib.contentElement
 tt_content.bg-video {
     templateName = BGVideo

@@ -11,7 +11,16 @@
   -->
 </f:comment>
 
-<div id="main-nav" class="container">
+<f:if condition="{data.layout}=30">
+    <f:then>
+      <f:variable name="cls" value="container bento"/>
+    </f:then>
+    <f:else>
+      <f:variable name="cls" value="container-fluid"/>
+    </f:else>
+</f:if>
+
+<div id="main-nav" class="{cls}">
   <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div class="container">
           <a class="navbar-brand" href="{base_url}">

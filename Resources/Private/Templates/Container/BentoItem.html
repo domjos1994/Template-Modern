@@ -1,0 +1,65 @@
+<f:comment>
+<!--
+~ Copyright (c) Domjos 2023
+~
+~ This file is part of Domjos-Modern.
+~ Domjos-Modern is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+~
+~ Domjos-Modern is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+~
+~ You should have received a copy of the GNU General Public License along with Foobar. If not, see https://www.gnu.org/licenses/.
+-->
+</f:comment>
+
+<f:variable name="img" value="{children_200.0.files.0}"/>
+<f:variable name="header" value="{children_200.0.header}"/>
+<f:variable name="subheader" value="{children_200.0.subheader}"/>
+<f:variable name="content" value="{children_201.0.bodytext}"/>
+<f:variable name="lightbox" value="true"/>
+<f:if condition="{data.layout}==10||{data.layout}==0">
+  <f:then>
+    <f:variable name="size" value="height-1"/>
+  </f:then>
+  <f:else>
+    <f:if condition="{data.layout}==20">
+      <f:then>
+        <f:variable name="size" value="height-2"/>
+      </f:then>
+      <f:else>
+        <f:variable name="size" value="height-3"/>
+      </f:else>
+    </f:if>
+  </f:else>
+</f:if>
+
+<div class="bento-item {size}">
+    <f:if condition="{img}">
+      <div class="bento-filter">
+        <f:image image="{img}" class="bento-img" maxHeight="300" maxWidth="300" height="300"/>
+      </div>
+    </f:if>
+    <div class="bento-body">
+        <f:for each="{children_201}" as="record">
+            <f:format.raw>{record.renderedContent}</f:format.raw>
+        </f:for>
+    </div>
+    <f:if condition="{lightbox}">
+        <f:then>
+            <a
+                    href="{img.originalFile.storage.configuration.basePath}{img.originalFile.identifier}"
+                    data-lightbox="lightbox"
+                    data-title="{img.title}">
+                <i class="fas fa-search-plus"></i>
+            </a>
+        </f:then>
+        <f:else>
+            <f:if condition="{f:count(subject: children_202)}!=0">
+                <div class="card-footer">
+                    <f:for each="{children_202}" as="record">
+                        <f:format.raw>{record.renderedContent}</f:format.raw>
+                    </f:for>
+                </div>
+            </f:if>
+        </f:else>
+    </f:if>
+</div>

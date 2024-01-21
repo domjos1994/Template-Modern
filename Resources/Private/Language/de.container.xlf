@@ -106,6 +106,35 @@
                 <target>Material-Karte</target>
             </trans-unit>
 
+            <trans-unit id="cce.bento.title">
+                <source>Bento-Grid-Item</source>
+                <target>Bento-Grid-Element</target>
+            </trans-unit>
+            <trans-unit id="cce.bento.description">
+                <source>A Item of the Bento-Grid!</source>
+                <target>Ein Element einer Bento-Grid</target>
+            </trans-unit>
+            <trans-unit id="cce.bento.header">
+                <source>Background-Picture of the Bento-Item</source>
+                <target>Hintergrund-Bild eines Bento-Elements</target>
+            </trans-unit>
+            <trans-unit id="cce.bento.content">
+                <source>Content of the Bento-Item</source>
+                <target>Inhalt eines Bento-Elements</target>
+            </trans-unit>
+            <trans-unit id="cce.bento.height.1">
+                <source>Small</source>
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="cce.bento.height.2">
+                <source>Medium</source>
+                <target>Mittel</target>
+            </trans-unit>
+            <trans-unit id="cce.bento.height.3">
+                <source>Large</source>
+                <target>Groß</target>
+            </trans-unit>
+
             <trans-unit id="cce.video.bg.title">
                 <source>Content, Background-Video</source>
                 <target>Inhalt, Hintergrund-Video</target>

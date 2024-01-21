@@ -108,6 +108,26 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
+(
+    new ContainerConfiguration(
+        'bento_item', // CType
+        $lang . ':cce.bento.title', // label
+        $lang . ':cce.bento.description', // description
+        [
+            [
+                ['name' => $lang . ':cce.bento.header', 'colPos' => 200, 'allowed' => ['CType' => 'image']]
+            ],
+            [
+                ['name' => $lang . ':cce.bento.content', 'colPos' => 201]
+            ]
+        ] // grid configuration
+    )
+  )
+        ->setIcon("$icons/card.svg")
+        ->setGroup('dm_content')
+);
+
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
     (
         new ContainerConfiguration(
             'bg-video', // CType

@@ -60,6 +60,14 @@ TCEFORM {
                         10 = LLL:EXT:template_modern/Resources/Private/Language/container.xlf:cce.card.layout.material
                     }
                 }
+                bento_item {
+                    removeItems = 1,2,3
+                    addItems {
+                        10 = LLL:EXT:template_modern/Resources/Private/Language/container.xlf:cce.bento.height.1
+                        20 = LLL:EXT:template_modern/Resources/Private/Language/container.xlf:cce.bento.height.2
+                        30 = LLL:EXT:template_modern/Resources/Private/Language/container.xlf:cce.bento.height.3
+                    }
+                }
                 accordion {
                     label = LLL:EXT:template_modern/Resources/Private/Language/container.xlf:cce.accordion.flush
                     removeItems = 1,2,3
