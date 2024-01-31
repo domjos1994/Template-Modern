@@ -18,21 +18,32 @@
     <f:else>
         <div class="mb-4 bg-light rounded-3 jumbotron">
             <div class="background">
-                <f:if condition="{headerContent.0.files.0}">
-                    <f:media
-                            file="{headerContent.0.files.0}"
-                            width="{dimensions.width}"
-                            height="{dimensions.height}"
-                            alt="header-image"
-                            title="Header-Image"
-                            loading="{settings.media.lazyLoading}"
-                            additionalAttributes="{srcset: '{f:uri.image(image: headerContent.0.files.0, maxWidth: 768)} 768w,
+                <f:if condition="{headerContent.0.data.CType}=='shortcut'">
+                    <f:then>
+                        <f:cObject
+                                typoscriptObjectPath="tt_content.{headerContent.0.data.CType}"
+                                data="{headerContent.0.data}"
+                                table="tt_content"
+                        />
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{headerContent.0.files.0}">
+                            <f:media
+                                    file="{headerContent.0.files.0}"
+                                    width="{dimensions.width}"
+                                    height="{dimensions.height}"
+                                    alt="header-image"
+                                    title="Header-Image"
+                                    loading="{settings.media.lazyLoading}"
+                                    additionalAttributes="{srcset: '{f:uri.image(image: headerContent.0.files.0, maxWidth: 768)} 768w,
                                     {f:uri.image(image: headerContent.0.files.0, maxWidth: 990)} 990w,
                                     {f:uri.image(image: headerContent.0.files.0, maxWidth: 1200)} 1200w,
                                     {f:uri.image(image: headerContent.0.files.0, maxWidth: 1440)} 1440w,
                                     {f:uri.image(image: headerContent.0.files.0, maxWidth: 1900)} 1900w',
                            sizes: '(min-width: 1200px) 50vw, 100vw'}"
-                    />
+                            />
+                        </f:if>
+                    </f:else>
                 </f:if>
             </div>
             <div class="container py-5">

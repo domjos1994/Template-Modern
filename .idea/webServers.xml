@@ -2,7 +2,11 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
+<<<<<<< HEAD
       <webServer id="65eb6975-94eb-4955-82f4-f90ff76e1762" name="Test-Server" url="http://webhosting13.1blu.de">
+=======
+      <webServer id="07ea9986-6eca-4d3d-8df0-a3e2c870c79e" name="Test-Server" url="http://webhosting13.1blu.de">
+>>>>>>> origin/Development
         <fileTransfer rootFolder="/www/domjos_test/template/templates" accessType="FTPS" host="webhosting13.1blu.de" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />

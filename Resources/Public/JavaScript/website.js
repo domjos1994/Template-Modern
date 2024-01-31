@@ -12,6 +12,14 @@
 
 $(document).ready(
     function () {
+        // replace shortcut in header
+        $("div.jumbotron div.background div.frame-type-shortcut").each(function () {
+           var img = $(this).find("img");
+           var header = $(this).find("header");
+           $(this).find("div.frame").replaceWith(img);
+           $("div.jumbotron div.container.py-5 h2").replaceWith(header.find("h2"))
+        });
+
         $(window).on("resize", function () {
             $('div.banner').each(function () {
                 if($(this).find('img').length) {
