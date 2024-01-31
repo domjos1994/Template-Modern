@@ -10,13 +10,14 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.0">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../.." />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
-=======
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.3" />
->>>>>>> origin/Development
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>

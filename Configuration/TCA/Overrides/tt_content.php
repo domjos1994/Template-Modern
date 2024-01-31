@@ -38,7 +38,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
         )
     )
     ->setIcon("$icons/container-1col.svg")
-    ->setGroup('dm_layout')
+    ->setGroup('tm_layout')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -59,7 +59,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
     )
     )
         ->setIcon("$icons/container-2col.svg")
-        ->setGroup('dm_layout')
+        ->setGroup('tm_layout')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -81,7 +81,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
         )
     )
     ->setIcon("$icons/container-3col.svg")
-    ->setGroup('dm_layout')
+    ->setGroup('tm_layout')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -104,7 +104,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
     )
     )
         ->setIcon("$icons/card.svg")
-        ->setGroup('dm_content')
+        ->setGroup('tm_content')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -124,7 +124,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
     )
   )
         ->setIcon("$icons/card.svg")
-        ->setGroup('dm_content')
+        ->setGroup('tm_content')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -144,7 +144,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
         )
     )
     ->setIcon("$icons/video.svg")
-    ->setGroup('dm_content')
+    ->setGroup('tm_content')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -161,7 +161,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
         )
     )
     ->setIcon("$icons/slider.svg")
-    ->setGroup('dm_content')
+    ->setGroup('tm_content')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -178,7 +178,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
     )
     )
         ->setIcon("$icons/gallery.svg")
-        ->setGroup('dm_content')
+        ->setGroup('tm_content')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -203,7 +203,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
         )
     )
     ->setIcon("$icons/tab_pane.svg")
-    ->setGroup('dm_content')
+    ->setGroup('tm_content')
 );
 
 GeneralUtility::makeInstance(Registry::class)->configureContainer(
@@ -221,7 +221,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
     )
     )
         ->setIcon("$icons/accordion.svg")
-        ->setGroup('dm_content')
+        ->setGroup('tm_content')
 );
 
 ExtensionManagementUtility::addTCAcolumns('tt_content', [

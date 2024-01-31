@@ -307,11 +307,11 @@
                 <target>Hineinragen</target>
             </trans-unit>
 
-            <trans-unit id="cce.dm_content">
+            <trans-unit id="cce.tm_content">
                 <source>Template-Modern: Content</source>
                 <target>Template-Modern: Inhalt</target>
             </trans-unit>
-            <trans-unit id="cce.dm_layout">
+            <trans-unit id="cce.tm_layout">
                 <source>Template-Modern: Layout</source>
                 <target>Template-Modern: Layout</target>
             </trans-unit>

@@ -6,7 +6,7 @@
       <paths name="Test-Server">
         <serverdata>
           <mappings>
-            <mapping deploy="/template_modern" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/template/templates/template_modern" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
