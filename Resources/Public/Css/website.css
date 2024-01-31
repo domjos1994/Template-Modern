@@ -308,6 +308,7 @@ h5.bigTitle {
 /* General Images */
 figure.image img.image-embed-item {
     object-fit: cover;
+    width: 100%;
 }
 
 figure.image.withFigCaption {
