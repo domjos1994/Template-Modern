@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="4267bdcc-6c54-439e-9bf1-6b35b8c1ebd9" name="RR-457" url="http://webhosting49.1blu.de">
+        <fileTransfer rootFolder="/www" accessType="FTPS" host="webhosting49.1blu.de" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

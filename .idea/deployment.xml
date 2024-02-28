@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Test-Server" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+  <component name="PublishConfigData" serverName="RR-457" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
+      <paths name="RR-457">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/rr-457/typo3conf/ext/template_modern" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/rr-457/typo3conf/sites/rr-457" local="$PROJECT_DIR$/Yaml" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="Test-Server">
         <serverdata>
           <mappings>
