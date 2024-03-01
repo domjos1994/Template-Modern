@@ -14,3 +14,10 @@ mod.wizards.newContentElement.wizardItems {
         show := addToList(template_modern_banner)
     }
 }
+mod.web_layout {
+    tt_content {
+        preview {
+            template_modern_banner = EXT:template_modern/Resources/Private/Templates/Preview/Banner.html
+        }
+    }
+}

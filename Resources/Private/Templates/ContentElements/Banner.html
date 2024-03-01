@@ -28,6 +28,11 @@
     </f:else>
 </f:if>
 
+<f:variable name="transparancy" value="ff"/>
+<f:if condition="{flexFormData.background_color}">
+    <f:variable name="transparancy" value="99"/>
+</f:if>
+
 <f:asset.css identifier="{data.uid}">
     div#c{data.uid} div.banner-content div.content p,
     div#c{data.uid} div.banner-content div.content span {
@@ -39,10 +44,9 @@
         font-size: {flexFormData.title_size}em;
     }
     div#c{data.uid} .bg {
-        background-color: {flexFormData.background_color};
+        background-color: {flexFormData.background_color}{transparancy};
     }
     div#c{data.uid} .opacity {
-        opacity: 0.8;
         padding: 1em;
     }
     div#c{data.uid} img {
