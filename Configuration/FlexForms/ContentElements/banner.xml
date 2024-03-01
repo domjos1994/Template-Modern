@@ -209,15 +209,69 @@
                                         <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.showMoreLink</numIndex>
                                         <numIndex index="1"/>
                                     </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.hover_effect</numIndex>
-                                        <numIndex index="1"/>
-                                    </numIndex>
                                 </items>
-                                <cols>2</cols>
+                                <cols>1</cols>
                             </config>
                         </TCEforms>
                     </show_more_link>
+                    <image_effect>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect
+                            </label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="-1">
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.none</numIndex>
+                                        <numIndex index="1">none</numIndex>
+                                    </numIndex>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.blur</numIndex>
+                                        <numIndex index="1">blur</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.brightness</numIndex>
+                                        <numIndex index="1">brightness</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.contrast</numIndex>
+                                        <numIndex index="1">contrast</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3">
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.grayscale</numIndex>
+                                        <numIndex index="1">grayscale</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4">
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.opacity</numIndex>
+                                        <numIndex index="1">opacity</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5">
+                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.saturate</numIndex>
+                                        <numIndex index="1">saturation</numIndex>
+                                    </numIndex>
+                                </items>
+                                <default>none</default>
+                            </config>
+                        </TCEforms>
+                    </image_effect>
+                    <image_effect_value>
+                        <TCEforms>
+                            <label>
+                                LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.value
+                            </label>
+                            <config>
+                                <type>number</type>
+                                <eval>int</eval>
+                                <range>
+                                    <lower>0</lower>
+                                    <upper>500</upper>
+                                </range>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </image_effect_value>
                 </el>
             </ROOT>
         </main>

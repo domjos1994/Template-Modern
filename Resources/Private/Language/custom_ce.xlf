@@ -48,8 +48,32 @@
             <trans-unit id="banner.ce.showMoreLink">
                 <source>Show 'More'-Link</source>
             </trans-unit>
-            <trans-unit id="banner.ce.hover_effect">
-                <source>Hover-Effect</source>
+            <trans-unit id="banner.ce.effect">
+                <source>Effect</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.blur">
+                <source>Blur</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.brightness">
+                <source>Brightness</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.contrast">
+                <source>Contrast</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.grayscale">
+                <source>Grayscale</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.opacity">
+                <source>Opacity</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.saturate">
+                <source>Saturate</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.none">
+                <source>No Effect</source>
+            </trans-unit>
+            <trans-unit id="banner.ce.value">
+                <source>Value (in % or px)</source>
             </trans-unit>
         </body>
     </file>
