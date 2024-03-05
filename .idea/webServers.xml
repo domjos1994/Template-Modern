@@ -9,6 +9,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="47ee475b-1db2-4f7d-86cb-a5d2310a20c9" name="CZ-Dillingen" url="http://webhosting49.1blu.de">
+        <fileTransfer rootFolder="/www/typo3/site" accessType="FTPS" host="webhosting49.1blu.de" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
