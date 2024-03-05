@@ -10,6 +10,7 @@
  * You should have received a copy of the GNU General Public License along with Foobar. If not, see http://www.gnu.org/licenses/.
  */
 
+
 $(document).ready(
     function () {
         // replace shortcut in header
@@ -121,6 +122,24 @@ $(document).ready(
                 }
             });
         }
+
+        $(window).scroll(function () {
+            var y = $(this).scrollTop() / 255.0;
+            var col = 255 - $(this).scrollTop();
+            if(y<=255) {
+                console.log(y);
+                $("div.sticky").css("background-color", "rgba(255,255,255," + y + ")");
+                $("div.sticky nav").css("background-color", "rgba(255,255,255," + y + ")");
+                $("div.sticky.top nav.fixed-top ul a").css("color", "rgb(" + col + ", " + col + ", " + col + ")");
+                $("div.sticky nav a.navbar-brand img").css("background-color", "rgba(" + col + ", " + col + ", " + col + "," + y + ")");
+
+            } else {
+                $("div.sticky").css("background-color", "rgb(255,255,255)");
+                $("div.sticky nav").css("background-color", "rgb(255,255,255)");
+                $("div.sticky.top nav.fixed-top ul a").css("color", "rgb(0,0,0)");
+                $("div.sticky nav a.navbar-brand img").css("background-color", "rgb(0,0,0)");
+            }
+        })
     }
 )
 

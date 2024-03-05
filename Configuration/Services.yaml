@@ -16,16 +16,16 @@ services:
         event: TYPO3\CMS\Backend\View\Event\AfterSectionMarkupGeneratedEvent
   TemplateModern\Dashboard\:
     resource: '../Classes/Dashboard/*'
-  dashboard.widget.DocumentationWidget:
-    class: 'TemplateModern\Dashboard\DocumentationWidget'
-    arguments:
-      $view: '@dashboard.views.widget'
-    tags:
-      - name: dashboard.widget
-        identifier: 'tm_documentation_widget'
-        groupNames: 'tm'
-        title: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.title'
-        description: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.description'
-        iconIdentifier: 'extension_icon'
-        height: 'large'
-        width: 'large'
+#  dashboard.widget.DocumentationWidget:
+#    class: 'TemplateModern\Dashboard\DocumentationWidget'
+#    arguments:
+#      $view: '@dashboard.views.widget'
+#    tags:
+#      - name: dashboard.widget
+#        identifier: 'tm_documentation_widget'
+#        groupNames: 'tm'
+#        title: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.title'
+#        description: 'LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:dashboard.widget.documentation_widget.description'
+#        iconIdentifier: 'extension_icon'
+#        height: 'large'
+#        width: 'large'

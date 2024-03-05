@@ -16,208 +16,240 @@
     <sheets>
         <main>
             <ROOT>
-                <TCEforms>
-                    <sheetTitle>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.title</sheetTitle>
-                </TCEforms>
+                <sheetTitle>
+                    LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.title
+                </sheetTitle>
                 <type>array</type>
                 <el>
                     <title>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title</label>
-                            <config>
-                                <type>input</type>
-                                <eval>trim</eval>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title</label>
+                        <config>
+                            <type>input</type>
+                            <eval>trim</eval>
+                        </config>
                     </title>
                     <subtitle>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content</label>
-                            <config>
-                                <type>text</type>
-                                <enableRichtext>1</enableRichtext>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content</label>
+                        <config>
+                            <type>text</type>
+                            <enableRichtext>1</enableRichtext>
+                        </config>
                     </subtitle>
                     <image>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.image</label>
-                            <config>
-                                <type>inline</type>
-                                <maxitems>1</maxitems>
-                                <foreign_table>sys_file_reference</foreign_table>
-                                <foreign_table_field>tablenames</foreign_table_field>
-                                <foreign_label>uid_local</foreign_label>
-                                <foreign_sortby>sorting_foreign</foreign_sortby>
-                                <foreign_field>uid_foreign</foreign_field>
-                                <foreign_selector>uid_local</foreign_selector>
-                                <foreign_selector_fieldTcaOverride>
-                                    <config>
-                                        <appearance>
-                                            <elementBrowserType>file</elementBrowserType>
-                                            <elementBrowserAllowed>gif,jpg,jpeg,png,svg</elementBrowserAllowed>
-                                        </appearance>
-                                    </config>
-                                </foreign_selector_fieldTcaOverride>
-                                <foreign_types type="array">
-                                    <numIndex index="0">
-                                        <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
-                                    </numIndex>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.image</label>
+                        <config>
+                            <type>inline</type>
+                            <maxitems>1</maxitems>
+                            <foreign_table>sys_file_reference</foreign_table>
+                            <foreign_table_field>tablenames</foreign_table_field>
+                            <foreign_label>uid_local</foreign_label>
+                            <foreign_sortby>sorting_foreign</foreign_sortby>
+                            <foreign_field>uid_foreign</foreign_field>
+                            <foreign_selector>uid_local</foreign_selector>
+                            <foreign_selector_fieldTcaOverride>
+                                <config>
+                                    <appearance>
+                                        <elementBrowserType>file</elementBrowserType>
+                                        <elementBrowserAllowed>gif,jpg,jpeg,png,svg</elementBrowserAllowed>
+                                    </appearance>
+                                </config>
+                            </foreign_selector_fieldTcaOverride>
+                            <foreign_types type="array">
+                                <numIndex index="0">
+                                    <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
+                                </numIndex>
+                            </foreign_types>
+                            <foreign_match_fields>
+                                <fieldname>pi_flexform_banner</fieldname>
+                            </foreign_match_fields>
+                            <appearance type="array">
+                                <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
+                                <headerThumbnail>
+                                    <field>uid_local</field>
+                                    <height>64</height>
+                                    <width>64</width>
+                                </headerThumbnail>
+                                <enabledControls>
+                                    <info>1</info>
+                                    <new>0</new>
+                                    <dragdrop>0</dragdrop>
+                                    <sort>1</sort>
+                                    <hide>0</hide>
+                                    <delete>1</delete>
+                                    <localize>1</localize>
+                                </enabledControls>
+                                <createNewRelationLinkTitle>LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference</createNewRelationLinkTitle>
+                            </appearance>
+                            <behaviour>
+                                <localizationMode>select</localizationMode>
+                                <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
+                            </behaviour>
+                            <overrideChildTca>
+                                <columns type="array">
+                                    <uid_local type="array">
+                                        <config type="array">
+                                            <appearance type="array">
+                                                <elementBrowserType>file</elementBrowserType>
+                                                <elementBrowserAllowed>jpg,jpeg,png,svg,gif</elementBrowserAllowed>
+                                            </appearance>
+                                        </config>
+                                    </uid_local>
+                                </columns>
+                                <types type="array">
                                     <numIndex index="2">
-                                        <showitem>--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette</showitem>
+                                        <showitem>alternative, title,--palette--;;filePalette</showitem>
                                     </numIndex>
-                                </foreign_types>
-                                <foreign_match_fields>
-                                    <fieldname>pi_flexform_banner</fieldname>
-                                </foreign_match_fields>
-                                <appearance type="array">
-                                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
-                                    <headerThumbnail>
-                                        <field>uid_local</field>
-                                        <height>64</height>
-                                        <width>64</width>
-                                    </headerThumbnail>
-                                    <enabledControls>
-                                        <info>1</info>
-                                        <new>0</new>
-                                        <dragdrop>0</dragdrop>
-                                        <sort>1</sort>
-                                        <hide>0</hide>
-                                        <delete>1</delete>
-                                        <localize>1</localize>
-                                    </enabledControls>
-                                    <createNewRelationLinkTitle>LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference</createNewRelationLinkTitle>
-                                </appearance>
-                                <behaviour>
-                                    <localizationMode>select</localizationMode>
-                                    <localizeChildrenAtParentLocalization>1</localizeChildrenAtParentLocalization>
-                                </behaviour>
-                                <overrideChildTca>
-                                    <columns type="array">
-                                        <uid_local type="array">
-                                            <config type="array">
-                                                <appearance type="array">
-                                                    <elementBrowserType>file</elementBrowserType>
-                                                    <elementBrowserAllowed>jpg,jpeg,png,svg,gif</elementBrowserAllowed>
-                                                </appearance>
-                                            </config>
-                                        </uid_local>
-                                    </columns>
-                                    <types type="array">
-                                        <numIndex index="2">
-                                            <showitem>alternative, title,--palette--;;filePalette</showitem>
-                                        </numIndex>
-                                    </types>
-                                </overrideChildTca>
-                            </config>
-                        </TCEforms>
+                                </types>
+                            </overrideChildTca>
+                        </config>
                     </image>
                     <banner_link>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.link</label>
-                            <config>
-                                <type>input</type>
-                                <renderType>inputLink</renderType>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.link</label>
+                        <config>
+                            <type>input</type>
+                            <renderType>inputLink</renderType>
+                        </config>
                     </banner_link>
                     <background_color>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.background_color</label>
-                            <config>
-                                <type>input</type>
-                                <renderType>colorpicker</renderType>
-                                <size>6</size>
-                                <wizards>
-                                    <color>
-                                        <type>colorbox</type>
-                                        <dim>212x18</dim>
-                                        <tableStyle>border:solid 1px black;</tableStyle>
-                                        <script>wizard_colorpicker.php</script>
-                                        <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
-                                        <module type="array">
-                                            <name>wizard_colorpicker</name>
-                                            <urlParameters type="array"/>
-                                        </module>
-                                    </color>
-                                </wizards>
-                                <eval>#555555</eval>
-                                <default/>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.background_color</label>
+                        <config>
+                            <type>input</type>
+                            <renderType>colorpicker</renderType>
+                            <size>6</size>
+                            <wizards>
+                                <color>
+                                    <type>colorbox</type>
+                                    <dim>212x18</dim>
+                                    <tableStyle>border:solid 1px black;</tableStyle>
+                                    <script>wizard_colorpicker.php</script>
+                                    <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                    <module type="array">
+                                        <name>wizard_colorpicker</name>
+                                        <urlParameters type="array"/>
+                                    </module>
+                                </color>
+                            </wizards>
+                            <eval>#555555</eval>
+                            <default/>
+                        </config>
                     </background_color>
                     <color>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.color</label>
-                            <config>
-                                <type>input</type>
-                                <renderType>colorpicker</renderType>
-                                <size>6</size>
-                                <wizards>
-                                    <color>
-                                        <type>colorbox</type>
-                                        <dim>212x18</dim>
-                                        <tableStyle>border:solid 1px black;</tableStyle>
-                                        <script>wizard_colorpicker.php</script>
-                                        <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
-                                        <module type="array">
-                                            <name>wizard_colorpicker</name>
-                                            <urlParameters type="array"/>
-                                        </module>
-                                    </color>
-                                </wizards>
-                                <eval>#555555</eval>
-                                <default/>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.color</label>
+                        <config>
+                            <type>input</type>
+                            <renderType>colorpicker</renderType>
+                            <size>6</size>
+                            <wizards>
+                                <color>
+                                    <type>colorbox</type>
+                                    <dim>212x18</dim>
+                                    <tableStyle>border:solid 1px black;</tableStyle>
+                                    <script>wizard_colorpicker.php</script>
+                                    <JSopenParams>height=340,width=360,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                    <module type="array">
+                                        <name>wizard_colorpicker</name>
+                                        <urlParameters type="array"/>
+                                    </module>
+                                </color>
+                            </wizards>
+                            <eval>#555555</eval>
+                            <default/>
+                        </config>
                     </color>
                     <title_size>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title.size</label>
-                            <config>
-                                <type>number</type>
-                                <eval>double2</eval>
-                                <range>
-                                    <lower>1</lower>
-                                    <upper>20</upper>
-                                </range>
-                                <default>5</default>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.title.size</label>
+                        <config>
+                            <type>number</type>
+                            <eval>double2</eval>
+                            <range>
+                                <lower>1</lower>
+                                <upper>20</upper>
+                            </range>
+                            <default>5</default>
+                        </config>
                     </title_size>
                     <content_size>
-                        <TCEforms>
-                            <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content.size</label>
-                            <config>
-                                <type>number</type>
-                                <eval>double2</eval>
-                                <range>
-                                    <lower>1</lower>
-                                    <upper>20</upper>
-                                </range>
-                                <default>3</default>
-                            </config>
-                        </TCEforms>
+                        <label>LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.content.size</label>
+                        <config>
+                            <type>number</type>
+                            <eval>double2</eval>
+                            <range>
+                                <lower>1</lower>
+                                <upper>20</upper>
+                            </range>
+                            <default>3</default>
+                        </config>
                     </content_size>
                     <show_more_link>
-                        <TCEforms>
-                            <label/>
-                            <config>
-                                <type>check</type>
-                                <items type="array">
-                                    <numIndex index="0" type="array">
-                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.showMoreLink</numIndex>
-                                        <numIndex index="1"/>
-                                    </numIndex>
-                                    <numIndex index="1" type="array">
-                                        <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.hover_effect</numIndex>
-                                        <numIndex index="1"/>
-                                    </numIndex>
-                                </items>
-                                <cols>2</cols>
-                            </config>
-                        </TCEforms>
+                        <label/>
+                        <config>
+                            <type>check</type>
+                            <items type="array">
+                                <numIndex index="0" type="array">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.showMoreLink</numIndex>
+                                    <numIndex index="1"/>
+                                </numIndex>
+                            </items>
+                            <cols>1</cols>
+                        </config>
                     </show_more_link>
+                    <image_effect>
+                        <label>
+                            LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect
+                        </label>
+                        <config>
+                            <type>select</type>
+                            <renderType>selectSingle</renderType>
+                            <items>
+                                <numIndex index="-1">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.none</numIndex>
+                                    <numIndex index="1">none</numIndex>
+                                </numIndex>
+                                <numIndex index="0">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.blur</numIndex>
+                                    <numIndex index="1">blur</numIndex>
+                                </numIndex>
+                                <numIndex index="1">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.brightness</numIndex>
+                                    <numIndex index="1">brightness</numIndex>
+                                </numIndex>
+                                <numIndex index="2">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.contrast</numIndex>
+                                    <numIndex index="1">contrast</numIndex>
+                                </numIndex>
+                                <numIndex index="3">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.grayscale</numIndex>
+                                    <numIndex index="1">grayscale</numIndex>
+                                </numIndex>
+                                <numIndex index="4">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.opacity</numIndex>
+                                    <numIndex index="1">opacity</numIndex>
+                                </numIndex>
+                                <numIndex index="5">
+                                    <numIndex index="0">LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.effect.saturate</numIndex>
+                                    <numIndex index="1">saturation</numIndex>
+                                </numIndex>
+                            </items>
+                            <default>none</default>
+                        </config>
+                    </image_effect>
+                    <image_effect_value>
+                        <label>
+                            LLL:EXT:template_modern/Resources/Private/Language/custom_ce.xlf:banner.ce.value
+                        </label>
+                        <config>
+                            <type>number</type>
+                            <eval>int</eval>
+                            <range>
+                                <lower>0</lower>
+                                <upper>500</upper>
+                            </range>
+                            <default>0</default>
+                        </config>
+                    </image_effect_value>
                 </el>
             </ROOT>
         </main>

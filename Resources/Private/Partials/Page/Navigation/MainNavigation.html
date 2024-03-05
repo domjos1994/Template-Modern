@@ -11,17 +11,26 @@
   -->
 </f:comment>
 
+<f:variable name="nav-class" value="bg-light sticky-top"/>
 <f:if condition="{data.layout}==30">
     <f:then>
       <f:variable name="cls" value="container bento"/>
     </f:then>
     <f:else>
-      <f:variable name="cls" value="container-fluid"/>
+      <f:if condition="{data.layout}==40">
+          <f:then>
+              <f:variable name="cls" value="container-fluid sticky top"/>
+              <f:variable name="nav-class" value="fixed-top"/>
+          </f:then>
+          <f:else>
+              <f:variable name="cls" value="container-fluid"/>
+          </f:else>
+      </f:if>
     </f:else>
 </f:if>
 
 <div id="main-nav" class="{cls}">
-  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <nav class="navbar navbar-expand-md navbar-light {nav-class}">
       <div class="container">
           <a class="navbar-brand" href="{base_url}">
               <f:if condition="{icon}">

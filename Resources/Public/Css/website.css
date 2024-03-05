@@ -194,6 +194,29 @@ h1.hidden {
     visibility: hidden;
 }
 
+/* Sticky-Nav */
+html body div.sticky.top,
+html body div.sticky.top nav.fixed-top {
+    background-color: rgba(255, 255, 255, 0);
+}
+main.sticky {
+    position: relative;
+    top: -4em;
+}
+
+main.sticky div.jumbotron img {
+    filter: opacity(0.64)!important;
+}
+
+main.sticky div.jumbotron div.img-filter {
+    background-color: rgba(201,104,0);
+}
+
+div.sticky.top nav.fixed-top ul a,
+div.sticky.top nav.fixed-top ul.navbar-nav a.active {
+    color: rgb(255,255,255);
+}
+
 /* breadcrumb */
 div.breadcrumb-container nav {
     margin-top: 0.5em;

@@ -91,6 +91,9 @@
             <trans-unit id="page.layout.30">
                 <source>Bento</source>
             </trans-unit>
+            <trans-unit id="page.layout.40">
+                <source>Sticky-Nav</source>
+            </trans-unit>
 
             <trans-unit id="page.filelinks.layout.1">
                 <source>List with additional Informations!</source>

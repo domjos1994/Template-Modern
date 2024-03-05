@@ -11,6 +11,28 @@
   -->
 </f:comment>
 
+<f:variable name="value" value=""/>
+<f:if condition="{flexFormData.image_effect}=='none'">
+    <f:then>
+        <f:variable name="value" value="unset"/>
+    </f:then>
+    <f:else>
+        <f:if condition="{flexFormData.image_effect}=='blur'">
+            <f:then>
+                <f:variable name="value" value="blur({flexFormData.image_effect_value}px)"/>
+            </f:then>
+            <f:else>
+                <f:variable name="value" value="{flexFormData.image_effect}({flexFormData.image_effect_value}%)"/>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>
+
+<f:variable name="transparancy" value="ff"/>
+<f:if condition="{flexFormData.background_color}">
+    <f:variable name="transparancy" value="99"/>
+</f:if>
+
 <f:asset.css identifier="{data.uid}">
     div#c{data.uid} div.banner-content div.content p,
     div#c{data.uid} div.banner-content div.content span {
@@ -22,21 +44,25 @@
         font-size: {flexFormData.title_size}em;
     }
     div#c{data.uid} .bg {
-        background-color: {flexFormData.background_color};
+        background-color: {flexFormData.background_color}{transparancy};
     }
     div#c{data.uid} .opacity {
-        opacity: 0.8;
         padding: 1em;
+    }
+    div#c{data.uid} img {
+        filter: {value};
     }
 </f:asset.css>
 
-<div class="jumbotron jumbotron-fluid banner {f:if(condition: '{flexFormData.show_more_link}==2||{flexFormData.show_more_link}==3',then:'hover')}" id="c{data.uid}">
+<div class="jumbotron jumbotron-fluid banner" id="c{data.uid}">
     <f:if condition="{files.0}">
         <f:then>
             <f:if condition="{flexFormData.banner_link}">
                 <f:then>
                     <f:link.typolink parameter="{flexFormData.banner_link}">
-                        <f:image image="{files.0}"/>
+                        <div class="img-filter">
+                            <f:image image="{files.0}"/>
+                        </div>
                         <div class="banner-content {f:if(condition: '{flexFormData.background_color}', then: 'bg opacity', else: '')}">
                             <h2 class="display-4">{flexFormData.title}</h2>
                             <f:if condition="{flexFormData.subtitle}">
@@ -48,7 +74,9 @@
                     </f:link.typolink>
                 </f:then>
                 <f:else>
-                    <f:image image="{files.0}"/>
+                    <div class="img-filter">
+                        <f:image image="{files.0}"/>
+                    </div>
                     <div class="banner-content {f:if(condition: '{flexFormData.background_color}', then: 'bg opacity', else: '')}">
                         <h2 class="display-4">{flexFormData.title}</h2>
                         <f:if condition="{flexFormData.subtitle}">

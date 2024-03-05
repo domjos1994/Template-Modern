@@ -59,9 +59,41 @@
                 <source>Show 'More'-Link</source>
                 <target>Zeige 'Mehr'-Link</target>
             </trans-unit>
-            <trans-unit id="banner.ce.hover_effect">
-                <source>Hover-Effect</source>
-                <target>Hover-Effekt</target>
+            <trans-unit id="banner.ce.effect">
+                <source>Effect</source>
+                <target>Effekt</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.blur">
+                <source>Blur</source>
+                <target>Verwischen</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.brightness">
+                <source>Brightness</source>
+                <target>Helligkeit</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.contrast">
+                <source>Contrast</source>
+                <target>Kontrast</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.grayscale">
+                <source>Grayscale</source>
+                <target>Graustufen</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.opacity">
+                <source>Opacity</source>
+                <target>Deckkraft</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.saturate">
+                <source>Saturate</source>
+                <target>Sättigung</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.effect.none">
+                <source>No Effect</source>
+                <target>Kein Effekt</target>
+            </trans-unit>
+            <trans-unit id="banner.ce.value">
+                <source>Value (in % or px)</source>
+                <target>Wert (in % oder px)</target>
             </trans-unit>
         </body>
     </file>

@@ -17,19 +17,19 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'Dominic Joas',
     'author_email' => 'developing@domjos.de',
     'author_company' => 'Domjos',
-    'version' => '12.4.0',
+    'version' => '13.0.1',
     'state' => 'stable',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.4.0-12.4.99',
-            'fluid_styled_content' => '11.4.0-12.4.99',
+            'typo3' => '12.4.0-13.99.99',
+            'fluid_styled_content' => '12.4.0-13.99.99',
             'container' => '2.2.0-2.3.99'
         ],
         'conflicts' => [
         ],
         'suggests' => [
-            'content_defender' => '3.4.0-3.4.99',
-            'new' => '11.2.0-11.9.99'
+            'content_defender' => '3.4.0-3.99.99',
+            'new' => '11.2.0-11.99.99'
         ]
     ],
     'uploadfolder' => 0,

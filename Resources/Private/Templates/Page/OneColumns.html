@@ -29,7 +29,11 @@
             <f:variable name="container" value="container"/>
         </f:else>
     </f:if>
-    <main role="main">
+    <f:variable name="cls" value=""/>
+    <f:if condition="{data.layout}==40">
+        <f:variable name="cls" value="sticky"/>
+    </f:if>
+    <main role="main" class="{cls}">
         <!--TYPO3SEARCH_begin-->
         <f:render partial="Jumbotron" arguments="{headerContent: headerContent}"/>
         <div class="{container} full-screen">
