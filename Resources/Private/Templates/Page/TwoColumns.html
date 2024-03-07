@@ -14,7 +14,11 @@
 
 <f:layout name="Default"/>
 <f:section name="Main">
-    <main role="main">
+    <f:variable name="cls" value=""/>
+    <f:if condition="{data.layout}==40">
+        <f:variable name="cls" value="sticky"/>
+    </f:if>
+    <main role="main" class="{cls}">
         <f:if condition="{data.layout}">
             <f:then>
                 <f:if condition="{data.layout}==20||{data.layout}==30">

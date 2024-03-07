@@ -6,48 +6,90 @@
 		Partials/List/Item.html
 -->
 <n:excludeDisplayedNews newsItem="{newsItem}" />
-<li class="list-group-item">
-	<div class="row news-list-item mb-3">
-	<div class="col-md-3">
-		<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-			<f:if condition="{newsItem.mediaPreviews}">
-				<f:then>
-					<f:media class="img-fluid" file="{newsItem.mediaPreviews.0}" title="{newsItem.mediaPreviews.0.originalResource.title}" alt="{newsItem.mediaPreviews.0.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}"  width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}" height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}" />
-				</f:then>
-				<f:else>
-					<core:icon identifier="newspaper" size="large" />
-				</f:else>
-			</f:if>
-		</n:link>
-	</div>
-
-	<div class="col-md-9 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
-		<h3 itemprop="headline">
-			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
-				{newsItem.title}
-			</n:link>
-		</h3>
-
-		<f:render partial="General/AdditionalInformation" arguments="{settings:settings,newsItem:newsItem}" />
-
-		<!-- teaser -->
-		<div class="lead" itemprop="description">
-			<n:removeMediaTags>
-				<f:if condition="{newsItem.teaser}">
+<f:if condition="{settings.templateLayout}=='12'">
+	<f:then>
+		<div class="col-4 news-layout">
+			<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+				<f:if condition="{newsItem.mediaPreviews}">
 					<f:then>
-						{newsItem.teaser -> f:format.crop(maxCharacters: '150', respectWordBoundaries:'1') -> f:format.html()}
+						<f:media class="img-fluid" file="{newsItem.mediaPreviews.0}" title="{newsItem.mediaPreviews.0.originalResource.title}" alt="{newsItem.mediaPreviews.0.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}"  width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}" height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}" />
 					</f:then>
 					<f:else>
-						{newsItem.bodytext -> f:format.crop(maxCharacters: '150', respectWordBoundaries:'1') -> f:format.html()}
+						<core:icon identifier="newspaper" size="large" />
 					</f:else>
 				</f:if>
-			</n:removeMediaTags>
+			</n:link>
+			<h3 itemprop="headline">
+				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+					{newsItem.title}
+				</n:link>
+			</h3>
+			<div class="lead" itemprop="description">
+				<n:removeMediaTags>
+					<f:if condition="{newsItem.teaser}">
+						<f:then>
+							{newsItem.teaser -> f:format.crop(maxCharacters: '150', respectWordBoundaries:'1') -> f:format.html()}
+						</f:then>
+						<f:else>
+							{newsItem.bodytext -> f:format.crop(maxCharacters: '150', respectWordBoundaries:'1') -> f:format.html()}
+						</f:else>
+					</f:if>
+				</n:removeMediaTags>
+			</div>
+			<div class="time">
+				<f:format.date format="d.m.y H:i">{newsItem.datetime}</f:format.date> -
+				<f:format.date format="d.m.y H:i">{newsItem.eventEnd}</f:format.date>
+			</div>
+			<n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-secondary btn-read-more" title="{newsItem.title}">
+				<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:more.link" />
+			</n:link>
 		</div>
+	</f:then>
+	<f:else>
+		<li class="list-group-item">
+			<div class="row news-list-item mb-3">
+				<div class="col-md-3">
+					<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+						<f:if condition="{newsItem.mediaPreviews}">
+							<f:then>
+								<f:media class="img-fluid" file="{newsItem.mediaPreviews.0}" title="{newsItem.mediaPreviews.0.originalResource.title}" alt="{newsItem.mediaPreviews.0.originalResource.alternative}" loading="{settings.list.media.image.lazyLoading}"  width="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.width)}" height="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else:'')}" />
+							</f:then>
+							<f:else>
+								<core:icon identifier="newspaper" size="large" />
+							</f:else>
+						</f:if>
+					</n:link>
+				</div>
 
-		<n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-secondary btn-read-more" title="{newsItem.title}">
-			<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:more.link" />
-		</n:link>
-	</div>
-</div>
-</li>
+				<div class="col-md-9 articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+					<h3 itemprop="headline">
+						<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">
+							{newsItem.title}
+						</n:link>
+					</h3>
+
+					<f:render partial="General/AdditionalInformation" arguments="{settings:settings,newsItem:newsItem}" />
+
+					<!-- teaser -->
+					<div class="lead" itemprop="description">
+						<n:removeMediaTags>
+							<f:if condition="{newsItem.teaser}">
+								<f:then>
+									{newsItem.teaser -> f:format.crop(maxCharacters: '150', respectWordBoundaries:'1') -> f:format.html()}
+								</f:then>
+								<f:else>
+									{newsItem.bodytext -> f:format.crop(maxCharacters: '150', respectWordBoundaries:'1') -> f:format.html()}
+								</f:else>
+							</f:if>
+						</n:removeMediaTags>
+					</div>
+
+					<n:link newsItem="{newsItem}" settings="{settings}" class="btn btn-secondary btn-read-more" title="{newsItem.title}">
+						<f:translate key="LLL:EXT:template_modern/Resources/Private/Language/locallang.xlf:more.link" />
+					</n:link>
+				</div>
+			</div>
+		</li>
+	</f:else>
+</f:if>
 </html>
