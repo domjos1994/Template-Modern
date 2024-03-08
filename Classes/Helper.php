@@ -15,6 +15,7 @@ namespace DominicJoas;
 use Exception;
 use Imagick;
 use ImagickException;
+use phpDocumentor\Reflection\Types\Boolean;
 use Tinify\Tinify;
 use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -39,8 +40,9 @@ class Helper {
      * in the plugin configuration
      * @param $event
      * @return void
+     * @throws \TYPO3\CMS\Core\Exception
      */
-    public static function compressIfEnabled($event): void {
+    public static function compressIfEnabled($event, ConnectionPool $pool): void {
         $enabled = Helper::findConstants("tinify.enabled");
         $key = Helper::findConstants("tinify.key");
 
@@ -48,7 +50,7 @@ class Helper {
             Helper::initTinify();
             Tinify::setKey($key);
 
-            Helper::compress($event->getFile());
+            Helper::compress($event->getFile(), $pool);
 
             $title = Helper::getString("locallang.xlf", "tinify.success.title");
             $msg = Helper::getString("locallang.xlf", "tinify.success.msg");
@@ -60,14 +62,19 @@ class Helper {
      * Compresses Images with tinify.
      * Need to set the Api-Key before
      * and initialize tinify.
-     * @see Helper::initTinify()
      * @param FileInterface $file
+     * @param ConnectionPool $pool
      * @return void
+     * @throws \TYPO3\CMS\Core\Exception
+     * @see Helper::initTinify()
      */
-    public static function compress(FileInterface $file): void {
+    public static function compress(FileInterface $file, ConnectionPool $pool): void {
         try {
-            $source = fromBuffer($file->getContents());
-            $file->setContents($source->toBuffer());
+            if(!Helper::isTinified($file->getIdentifier(), $pool)) {
+                $source = fromBuffer($file->getContents());
+                $file->setContents($source->toBuffer());
+                Helper::setTinified($file->getIdentifier(), $pool);
+            }
         } catch (Exception $ex) {
             Helper::genMessage("Error compress image!", $ex->getMessage(), "e");
         }
@@ -77,11 +84,12 @@ class Helper {
      * Compresses Images with tinify.
      * Need to set the Api-Key before
      * and initialize tinify.
-     * @see Helper::initTinify()
      * @param FileInterface $file
      * @param ResourceStorage $storage
      * @param ConnectionPool $pool
      * @return void
+     * @throws \TYPO3\CMS\Core\Exception
+     * @see Helper::initTinify()
      */
     public static function compressAndRename(FileInterface $file, ResourceStorage $storage, ConnectionPool $pool): void {
         try {
@@ -93,11 +101,14 @@ class Helper {
                     $file->getName()
                 );
 
-            $folder = $storage->getFolder($storage->getFolderIdentifierFromFileIdentifier($file->getIdentifier()));
-            $newFile = $storage->copyFile($file, $folder, $identifier);
-            $newFile->setContents($source->toBuffer());
+            if(!Helper::isTinified($identifier, $pool)) {
+                $folder = $storage->getFolder($storage->getFolderIdentifierFromFileIdentifier($file->getIdentifier()));
+                $newFile = $storage->copyFile($file, $folder, $identifier);
+                $newFile->setContents($source->toBuffer());
 
-            Helper::renameReference($file->getIdentifier(), $newFile->getIdentifier(), $pool);
+                Helper::renameReference($file->getIdentifier(), $newFile->getIdentifier(), $pool);
+                Helper::setTinified($identifier, $pool);
+            }
         } catch (Exception $ex) {
             Helper::genMessage("Error compress image!", $ex->getMessage() . $ex->getLine(), "e");
         }
@@ -117,6 +128,41 @@ class Helper {
 
             $queryBuilder = $pool->getQueryBuilderForTable("sys_file_reference")->update("sys_file_reference");
             $queryBuilder = $queryBuilder->where("uid_local=$array[0]")->set("uid_local", $array[1]);
+            $queryBuilder->executeStatement();
+        } catch (Exception $ex) {
+            Helper::genMessage("Error compress image!", $ex->getMessage() . $ex->getLine(), "e");
+        }
+    }
+
+    /**
+     * @throws Exception
+     */
+    private static function isTinified($identifier, ConnectionPool $pool): Boolean
+    {
+        try {
+            $queryBuilder = $pool->getQueryBuilderForTable('sys_file')->select("*")->from("sys_file");
+            $queryBuilder = $queryBuilder->where("identifier='". $identifier ."'");
+
+            $tinified = false;
+            $result = $queryBuilder->executeQuery();
+            while ($row = $result->fetchAssociative()) {
+                $tinified = $row["template_modern_tinified"];
+            }
+            return $tinified;
+        } catch (Exception|\Doctrine\DBAL\Exception $ex) {
+            Helper::genMessage("Error compress image!", $ex->getMessage() . $ex->getLine(), "e");
+        }
+        return false;
+    }
+
+    /**
+     * @throws Exception
+     */
+    private static function setTinified($identifier, ConnectionPool $pool): void
+    {
+        try {
+            $queryBuilder = $pool->getQueryBuilderForTable("sys_file")->update("sys_file");
+            $queryBuilder = $queryBuilder->where("identifier='". $identifier ."'")->set("template_modern_tinified", 1);
             $queryBuilder->executeStatement();
         } catch (Exception $ex) {
             Helper::genMessage("Error compress image!", $ex->getMessage() . $ex->getLine(), "e");
@@ -149,7 +195,7 @@ class Helper {
      */
     public static function initTinify(): void {
         try {
-            $path = ExtensionManagementUtility::extPath('domjos_modern') . "Classes";
+            $path = ExtensionManagementUtility::extPath('template_modern') . "Classes";
             require_once($path . "/lib/Tinify/Exception.php");
             require_once($path . "/lib/Tinify/ResultMeta.php");
             require_once($path . "/lib/Tinify/Result.php");
@@ -165,13 +211,14 @@ class Helper {
      * Finds a constant in the plugin-settings
      * @param $key
      * @return mixed|string
+     * @throws \TYPO3\CMS\Core\Exception
      */
     public static function findConstants($key): mixed {
         try {
             $utility = GeneralUtility::makeInstance(
                 ExtensionConfiguration::class
             );
-            $extension = $utility->get("domjos_modern");
+            $extension = $utility->get("template_modern");
 
             $current = $extension;
             foreach(explode(".", $key) as $item) {
@@ -261,6 +308,7 @@ class Helper {
      * @param String $msg
      * @param string $status (error, info, warning, notice, ok) or (e, i, w, n, ok)
      * @return void
+     * @throws \TYPO3\CMS\Core\Exception
      */
     public static function genMessage(String $title, String $msg, string $status): void {
         if($title == null && $msg == null) {
@@ -284,7 +332,7 @@ class Helper {
         $flashMessageService = GeneralUtility::makeInstance(FlashMessageService::class);
         $messageQueue = $flashMessageService->getMessageQueueByIdentifier();
         $message = GeneralUtility::makeInstance(FlashMessage::class, $msg, $title, $type, true);
-        $messageQueue->addMessage($message);
+        $messageQueue->enqueue($message);
     }
 
     /**
