@@ -45,45 +45,65 @@
                           </f:for>
                       </ul>
                   </div>
-                  <div class="col-md-4">
-                      <ul class="nav contact-and-social flex-column">
-                          <f:if condition="{contact_email}">
-                              <li class="nav-item">
-                                  <a class="nav-link" href="mailto: {contact_email}" title="Contact"><i class="fa fa-at"></i> {contact_email}</a>
-                              </li>
-                          </f:if>
-                          <f:if condition="{contact_phone}">
-                              <li class="nav-item">
-                                  <a class="nav-link" href="tel:{contact_phone}" title="Contact"><i class="fa fa-phone"></i> {contact_phone}</a>
-                              </li>
-                          </f:if>
-                          <f:if condition="{contact_donate}">
-                              <li class="nav-item">
-                                  <a class="nav-link disabled" href="#" title="Donate"><i class="fas fa-donate"></i> {contact_donate}</a>
-                              </li>
-                          </f:if>
-                          <f:if condition="{footer_instagram} || {footer_youtube} || {footer_facebook}">
-                              <li class="nav-item active">
-                                  <a class="nav-link disabled" href="#"></a>
-                              </li>
-                              <f:if condition="{footer_facebook}">
-                                  <li class="nav-item">
-                                      <a class="nav-link" href="{footer_facebook}" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
-                                  </li>
-                              </f:if>
-                              <f:if condition="{footer_instagram}">
-                                  <li class="nav-item">
-                                      <a class="nav-link" href="{footer_instagram}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                  </li>
-                              </f:if>
-                              <f:if condition="{footer_youtube}">
-                                  <li class="nav-item">
-                                      <a class="nav-link" href="{footer_youtube}" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> Youtube</a>
-                                  </li>
-                              </f:if>
-                          </f:if>
-                      </ul>
-                  </div>
+                  <f:if condition="{footernavigation2}">
+                      <f:then>
+                          <div class="col-md-4">
+                              <ul class="nav flex-column">
+                                  <f:for each="{footernavigation2}" as="item">
+                                      <li class="nav-item">
+                                          <a class="nav-link {f:if(condition: item.active, then: 'active')}"
+                                             href="{item.link}"
+                                             target="{item.target}"
+                                             title="{item.title}">
+                                              {item.title}
+                                          </a>
+                                      </li>
+                                  </f:for>
+                              </ul>
+                          </div>
+                      </f:then>
+                      <f:else>
+                          <div class="col-md-4">
+                              <ul class="nav contact-and-social flex-column">
+                                  <f:if condition="{contact_email}">
+                                      <li class="nav-item">
+                                          <a class="nav-link" href="mailto: {contact_email}" title="Contact"><i class="fa fa-at"></i> {contact_email}</a>
+                                      </li>
+                                  </f:if>
+                                  <f:if condition="{contact_phone}">
+                                      <li class="nav-item">
+                                          <a class="nav-link" href="tel:{contact_phone}" title="Contact"><i class="fa fa-phone"></i> {contact_phone}</a>
+                                      </li>
+                                  </f:if>
+                                  <f:if condition="{contact_donate}">
+                                      <li class="nav-item">
+                                          <a class="nav-link disabled" href="#" title="Donate"><i class="fas fa-donate"></i> {contact_donate}</a>
+                                      </li>
+                                  </f:if>
+                                  <f:if condition="{footer_instagram} || {footer_youtube} || {footer_facebook}">
+                                      <li class="nav-item active">
+                                          <a class="nav-link disabled" href="#"></a>
+                                      </li>
+                                      <f:if condition="{footer_facebook}">
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="{footer_facebook}" target="_blank" title="Facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                                          </li>
+                                      </f:if>
+                                      <f:if condition="{footer_instagram}">
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="{footer_instagram}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                                          </li>
+                                      </f:if>
+                                      <f:if condition="{footer_youtube}">
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="{footer_youtube}" target="_blank" title="Youtube"><i class="fab fa-youtube"></i> Youtube</a>
+                                          </li>
+                                      </f:if>
+                                  </f:if>
+                              </ul>
+                          </div>
+                      </f:else>
+                  </f:if>
                   <div class="col-md-4">
                       <f:if condition="{contact_maps_embed_link}">
                           <iframe title="OSM-Maps" class="maps" width="425" height="350" src="{contact_maps_embed_link}" style="border: 1px solid black"></iframe><br/><small><a href="{contact_maps_big_link}">Größere Karte anzeigen</a></small>
