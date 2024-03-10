@@ -205,11 +205,7 @@ main.sticky {
 }
 
 main.sticky div.jumbotron img {
-    filter: opacity(0.64)!important;
-}
-
-main.sticky div.jumbotron div.img-filter {
-    background-color: rgba(201,104,0);
+    mask-image: linear-gradient(to bottom, white 70%, transparent 100%);
 }
 
 div.sticky.top nav.fixed-top ul a,
@@ -864,6 +860,12 @@ div.row div div.tx-indexedsearch-res.card {
     }
     div.bg-non-overlay .bg_img_with_text {
         margin-bottom: 1em!important;
+    }
+    div nav.navbar a.navbar-brand {
+        background-color: unset;
+    }
+    div.sticky nav.navbar a.navbar-brand {
+        background-color: #000;
     }
 }
 

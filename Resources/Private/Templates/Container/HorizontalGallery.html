@@ -14,11 +14,20 @@
 <div class="container-fluid container-gallery">
     <div class="imgstrip">
         <f:for each="{children_200}" as="item" iteration="iterator">
-            <f:for each="{item.files}" as="file" iteration="iteration">
-                <a href="{file.originalFile.publicUrl}" title="{file.originalFile.properties.title}" data-lightbox="lightbox">
-                    <img class="clipped" height="{data.template_modern_gallery_height}" src="{file.originalFile.publicUrl}" alt="{file.originalFile.properties.alternative}">
-                </a>
-            </f:for>
+            <f:if condition="{item.CType}=='news_newsliststicky'">
+                <f:then>
+                    <f:format.raw>
+                        {item.renderedContent}
+                    </f:format.raw>
+                </f:then>
+                <f:else>
+                    <f:for each="{item.files}" as="file" iteration="iteration">
+                        <a href="{file.originalFile.publicUrl}" title="{file.originalFile.properties.title}" data-lightbox="lightbox">
+                            <img class="clipped" height="{data.template_modern_gallery_height}" src="{file.originalFile.publicUrl}" alt="{file.originalFile.properties.alternative}">
+                        </a>
+                    </f:for>
+                </f:else>
+            </f:if>
         </f:for>
     </div>
 </div>

@@ -2,6 +2,7 @@ RTE.default.preset = template_modern
 
 tx_news.templateLayouts {
     12 = Landing-Page
+    13 = Horizontal Gallery
 }
 TCEFORM {
     pages {

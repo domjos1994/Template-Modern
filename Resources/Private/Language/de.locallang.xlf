@@ -177,7 +177,7 @@
             </trans-unit>
             <trans-unit id="date.format">
                 <source>M/d/Y</source>
-                <target>d.M.Y</target>
+                <target>d.m.Y</target>
             </trans-unit>
             <trans-unit id="search.for">
                 <source>Search for</source>

@@ -63,3 +63,12 @@ div.container-gallery img:focus {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
+
+.gal_item {
+    display: inline-block;
+    margin: 1em;
+}
+.gal_item .btn {
+    display: block;
+    margin-top: 1em;
+}

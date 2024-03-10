@@ -75,7 +75,7 @@
 	<div class="col-md-12" style="border: 1px solid #ccc;">
 		<strong>
 			<i class="fas fa-newspaper"></i>&nbsp;<n:link newsItem="{n}" settings="{settings}">{n.title}</n:link>
-			| {f:format.date(date:n.datetime,format:'%d.%m')}</strong>
+			| {f:format.date(date:n.datetime,format:'d.m H:i')}</strong>
 		<f:if condition="{n.organizer}||{n.location}||{n.eventEnd}">
 			<ul>
 				<f:if condition="{n.organizer}">
@@ -96,7 +96,7 @@
 					<li>
 						<strong>
 							<f:translate key="event_end" extensionName="eventnews" />
-						</strong>: {f:format.date(date:n.eventEnd,format:'%d.%m.%Y')}
+						</strong>: {f:format.date(date:n.eventEnd,format:'d.m.Y H:i')}
 					</li>
 				</f:if>
 			</ul>

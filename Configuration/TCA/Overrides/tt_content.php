@@ -172,7 +172,7 @@ GeneralUtility::makeInstance(Registry::class)->configureContainer(
         $lang . ':cce.horizontal-gallery.description', // description
         [
             [
-                ['name' => $lang . ':cce.horizontal-gallery.content', 'colPos' => 200, 'allowed' => ['CType' => 'image']]
+                ['name' => $lang . ':cce.horizontal-gallery.content', 'colPos' => 200, 'allowed' => ['CType' => 'image,news_newsliststicky']]
             ]
         ] // grid configuration
     )
