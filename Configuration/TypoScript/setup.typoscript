@@ -295,6 +295,16 @@ page {
                     isTrue = {$menu.footer}
                 }
             }
+            21 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            21 {
+                special = directory
+                special.value = {$menu.footer2}
+                levels = 1
+                as = footernavigation2
+                if {
+                    isTrue = {$menu.footer2}
+                }
+            }
             30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             30 {
                 special = rootline

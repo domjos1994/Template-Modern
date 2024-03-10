@@ -297,6 +297,7 @@ ExtensionManagementUtility::addTcaSelectItem(
 );
 
 $GLOBALS['TCA']['tt_content']['types']['template_modern_banner'] = [
+    'previewRenderer' => \TemplateModern\EventListener\BannerPreviewRenderer::class,
     'showitem' => '
             --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
                --palette--;;general,
@@ -320,3 +321,4 @@ ExtensionManagementUtility::addPiFlexFormValue(
     'FILE:EXT:template_modern/Configuration/FlexForms/ContentElements/banner.xml',
     'template_modern_banner'
 );
+

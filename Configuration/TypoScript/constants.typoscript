@@ -14,6 +14,8 @@ page {
 # customsubcategory=colors=Colors
 # customsubcategory=tools=External Tools
 # customsubcategory=dev=Developer-Options
+# customsubcategory=maps=Maps
+# customsubcategory=social=Social-Media
 
 dev {
     # cat=Template-Modern/dev/a; type=boolean; label=Debug Mode: Enable Debug-Mode
@@ -38,6 +40,8 @@ site {
 menu {
     # cat=Template-Modern/navigation/a; type=int+; label=Footer: ID of footer menu
     footer =
+    # cat=Template-Modern/navigation/b; type=int+; label=Footer 2: ID of footer menu instead of social-bar
+    footer2 =
     # cat=Template-Modern/footer/a; type=boolean; label=Footer fixed Bottom: Show the footer fixed to the bottom of the site
     footerFixedBottom =
 
@@ -48,25 +52,25 @@ menu {
     # cat=Template-Modern/footer/d; type=string; label=Donate: Account-Data for donation
     footer.donate =
 
-    # cat=Template-Modern/footer/e; type=string; label=OSM-Link: Link to the embedded-map
+    # cat=Template-Modern/maps/a; type=string; label=OSM-Link: Link to the embedded-map
     footer.maps.embed_link =
 
-    # cat=Template-Modern/footer/f; type=string; label=OSM-BIG: Link to the big map
+    # cat=Template-Modern/maps/b; type=string; label=OSM-BIG: Link to the big map
     footer.maps.big_map =
 
-    # cat=Template-Modern/navigation/b; type=boolean; label=Breadcrumb: Enable Breadcrumb
+    # cat=Template-Modern/navigation/c; type=boolean; label=Breadcrumb: Enable Breadcrumb
     breadcrumb =
 
-    # cat=Template-Modern/navigation/c; type=boolean; label=Language-Menu: Show Menu
+    # cat=Template-Modern/navigation/d; type=boolean; label=Language-Menu: Show Menu
     lang =
 }
 
 social {
-    # cat=Template-Modern/footer/g; type=string; label=Facebook: Link to Facebook-Page
+    # cat=Template-Modern/social/a; type=string; label=Facebook: Link to Facebook-Page
     facebook =
-    # cat=Template-Modern/footer/h; type=string; label=Youtube: Link to Youtube-Channel
+    # cat=Template-Modern/social/b; type=string; label=Youtube: Link to Youtube-Channel
     youtube =
-    # cat=Template-Modern/footer/i; type=string; label=Instagram: Link to Instagram-Page
+    # cat=Template-Modern/social/c; type=string; label=Instagram: Link to Instagram-Page
     instagram =
 }
 

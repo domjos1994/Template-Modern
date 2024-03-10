@@ -13,14 +13,19 @@
 namespace TemplateModern\EventListener;
 
 use DominicJoas\Helper;
+use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Resource\Event\AfterFileAddedEvent;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 class AfterFileAddedEventListener {
 
+    public function __construct(
+        private readonly ConnectionPool $connectionPool,
+    ) {}
+
     public function __invoke(AfterFileAddedEvent $event): void {
         $path = ExtensionManagementUtility::extPath('template_modern') . "Classes";
         require_once($path . "/Helper.php");
-        Helper::compressIfEnabled($event);
+        Helper::compressIfEnabled($event, $this->connectionPool);
     }
 }

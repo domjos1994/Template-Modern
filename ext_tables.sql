@@ -13,3 +13,7 @@ CREATE TABLE tt_content (
     template_modern_bg_color varchar(22) DEFAULT '' NOT NULL,
     template_modern_gallery_height varchar(22) DEFAULT '' NOT NULL,
 );
+
+CREATE TABLE sys_file (
+    template_modern_tinified INTEGER DEFAULT 0,
+);
