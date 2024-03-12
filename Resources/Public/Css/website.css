@@ -867,6 +867,20 @@ div.row div div.tx-indexedsearch-res.card {
     div.sticky nav.navbar a.navbar-brand {
         background-color: #000;
     }
+    main.sticky {
+        position: inherit;
+        top: unset;
+    }
+    nav.fixed-top {
+        position: unset;
+    }
+    div.sticky.top nav.fixed-top ul li a {
+        color: #000;
+    }
+    div.sticky.top nav.fixed-top ul.navbar-nav li a.active {
+        color: #000;
+        text-decoration: underline;
+    }
 }
 
 @media (max-width: 700px) {
